@@ -1,0 +1,8 @@
+{
+  "name": "MenkiR",
+  "description": "The professional portfolio of Menkir Wolde, featuring African mega-infrastructure projects, civil engineering landmarks, and digital products.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

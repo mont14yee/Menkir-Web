@@ -1,0 +1,386 @@
+{
+  "hero": {
+    "title": "MENKIR WOLDE",
+    "subtitle": "Your Future, Designed.",
+    "description": "Move beyond planning. Architect a year of purpose, achievement, and growth.",
+    "cta": "Begin Your Blueprint &rarr;",
+    "inputPlaceholder": "Launch my podcast...",
+    "buttonText": "Generate"
+  },
+  "footer": {
+    "ctaTitle": "Build a Legacy, One Day at a Time.",
+    "ctaSubtitle": "Download MENKIR WOLDE and receive the blueprint to your best year.",
+    "copyright": "MENKIR WOLDE. All rights reserved."
+  },
+  "profile": {
+    "pictureUrl": "/profile.webp",
+    "name": "Menkir Wolde",
+    "tagline": "Professional Civil Engineer",
+    "status": "Available Now",
+    "availability": "Available for Freelance & Fulltime",
+    "roles": "Civil Engineer (Construction, Design and Consulting), UX/UI Designer",
+    "location": "Sheger, Ethiopia",
+    "locationUrl": "https://www.google.com/maps/place/Addis+Ababa/",
+    "stats": {
+      "views": 31391,
+      "appreciations": 3056,
+      "followers": 942,
+      "following": 174
+    }
+  },
+  "featured": [
+    "proj9",
+    "proj8",
+    "proj1",
+    "proj3",
+    "proj5",
+    "proj-coastal",
+    "proj-fluid"
+  ],
+  "featured_designs": [
+    "design4",
+    "design1",
+    "design2"
+  ],
+  "projects": [
+    {
+      "id": "proj9",
+      "title": "Ultimate Development Plan",
+      "poster": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
+      "quip": "ANNUAL TEMPLATE",
+      "tags": [
+        "UX/UI Design",
+        "Frontend Development",
+        "Interactive Experience"
+      ],
+      "video": "https://assets.mixkit.co/videos/preview/mixkit-binary-code-passing-through-a-screen-28775-large.mp4",
+      "name": "Menkir Wolde",
+      "major": "Frontend Design",
+      "plot": "An interactive digital experience showcasing a professional blueprint for a designed future.",
+      "structuralComponents": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "overview": "## Ultimate Development Plan: ANNUAL TEMPLATE\n\nThis project represents a conceptual leap into interactive frontend design, envisioning a structural approach to personal and professional milestones. By treating life's goals with the same rigor as architectural blueprints, it provides a comprehensive master timeline and strategic overview.\n\n### Interactive Experience\n\nThe interface is designed to emulate a high-tech blueprint system, combining cinematic visuals with rigorous structured data representation. Users can explore various stages of growth and technical mastery through an immersive scrolling experience.\n\n*   **Dynamic Theming:** Seamless transitions between visual modes to represent different phases of the timeline.\n*   **Responsive Architecture:** A fully fluid layout that adapts to any screen, ensuring the 'blueprint' is always legible and impactful.\n*   **Component-Driven Design:** Built utilizing a modular React architecture, allowing for scalable feature additions and smooth interactions."
+    },
+    {
+      "id": "proj2",
+      "title": "Koysha Hydroelectric Powerplant",
+      "poster": "https://images.unsplash.com/photo-1534043464124-3be32fe000c9?q=80&w=400&h=600&fit=crop",
+      "quip": "1,000m height inspections—dizzying heights, steady hands!",
+      "tags": [
+        "Roller-Compacted Concrete",
+        "Energy Sector"
+      ],
+      "video": "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-construction-site-44380-large.mp4",
+      "name": "Menkir Wolde",
+      "major": "High-Altitude Thriller",
+      "plot": "As a key component of a cascaded system of dams, the Koysha project demands precision and resilience, featuring a massive RCC structure designed for optimal power generation and flow management.",
+      "structuralComponents": [
+        "Roller-Compacted Concrete",
+        "Power Intake",
+        "Transmission Lines",
+        "Environmental Impact Assessment"
+      ],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "infographicsUrl": "https://t.me/frontenddesigns",
+      "brochureUrl": "https://www.webuildgroup.com/en/projects/dams-hydroelectric-plants/koysha-hydroelectric-project",
+      "overview": "## Koysha Hydroelectric Powerplant: Taming the Omo River\n\nThe Koysha Hydroelectric Project is a cornerstone of Ethiopia's Gibe-Omo cascade, a series of dams designed to harness the immense power of the Omo River. As the fourth dam in this sequence, Koysha is a testament to advanced engineering in challenging terrain, poised to significantly boost the nation's energy capacity and drive sustainable development.\n\n### Engineering Marvel in a Remote Landscape\n\nBuilt downstream from the Gilgel Gibe III dam, the Koysha project involves the construction of a massive Roller-Compacted Concrete (RCC) gravity dam, a power station, and extensive transmission infrastructure.\n\n*   **Dam Structure:** The dam stands at an impressive height of **170 meters**, utilizing the latest in RCC technology for rapid and robust construction.\n*   **Installed Capacity:** The powerhouse is equipped with eight Francis turbine units, each with a capacity of 275 MW, culminating in a total installed capacity of **2,200 MW**.\n*   **Annual Generation:** The plant is projected to generate an average of **6,460 GWh** of electricity annually, providing a reliable source of clean energy for millions.\n*   **Reservoir Volume:** The dam creates a reservoir with a storage capacity of 6 billion cubic meters, crucial for regulating water flow and ensuring consistent power generation.\n\n### Strategic Importance and Impact\n\nKoysha is more than just a power plant; it's a strategic asset for Ethiopia's economic future.\n\n*   **National Grid Fortification:** The project significantly increases the reliability and capacity of the national electricity grid, reducing power shortages and supporting industrialization.\n*   **Regional Integration:** Excess power generated from Koysha is earmarked for export to neighboring countries, fostering regional economic integration and positioning Ethiopia as a key energy hub in East Africa.\n*   **Socioeconomic Development:** The construction phase created thousands of jobs for local communities and spurred the development of new infrastructure, including roads and social services, in a previously remote region.\n\n### Project Notes & Linked Ideas (Coming Soon)\n\nThis section will soon integrate directly with the **Notes Pages Nexus**, linking real-time project insights, field notes, and strategic ideas developed within the MENKIR WOLDE app. Imagine connecting a spontaneous sketch of a revised turbine layout directly to this project's master file.\n\n*   **Linked Note:** *Initial geological survey challenges and solutions.*\n*   **Linked Idea:** *Feasibility study for integrating floating solar panels on the Koysha reservoir.*\n*   **Linked Sketch:** *Concept for optimizing spillway hydraulics.*",
+      "gallery": [
+        "https://images.unsplash.com/photo-1541888075762-f5e1ba8f1a84?q=80&w=800&h=450&fit=crop"
+      ]
+    },
+    {
+      "id": "proj-coastal",
+      "title": "Coastal Trumpet Interchange",
+      "poster": "https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=2670&auto=format&fit=crop",
+      "quip": "Advanced Traffic Flow Engineering & Resilience",
+      "tags": [
+        "Civil Engineering",
+        "Infrastructure",
+        "Resilience"
+      ],
+      "video": "",
+      "name": "Menkir Wolde",
+      "major": "Infrastructure Engineering",
+      "plot": "The Coastal Trumpet Interchange represents the pinnacle of modern civil engineering, balancing capacity, cost, and climate resilience.",
+      "structuralComponents": [
+        "Civil Logic",
+        "Resilience Design",
+        "Traffic Optimization"
+      ],
+      "overview": "Interactive Design Presentation.\n\n*Please click outside the modal or use the Watch Reel button (if provided).*"
+    },
+    {
+      "id": "proj-fluid",
+      "title": "Fluid Engineering Framework",
+      "poster": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop",
+      "quip": "Building Interactive Intelligence",
+      "tags": [
+        "System Design",
+        "UI/UX",
+        "Interactive"
+      ],
+      "video": "",
+      "name": "Menkir Wolde",
+      "major": "Interactive Intelligence",
+      "plot": "Explore our interactive component library showcasing seamless interactions, dynamic data processing, and performant UI architectures.",
+      "structuralComponents": [
+        "React",
+        "TypeScript",
+        "Performance"
+      ],
+      "overview": "Interactive Interface Presentation.\n\n*Please click outside the modal or use the Watch Reel button (if provided).*"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "blog2",
+      "title": "Stop Smashing Things Like Toddlers: Why Your Next Office Should Have a LinkedIn Profile",
+      "poster": "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=400&h=600&fit=crop",
+      "poster_prompt": "A humorous yet high-tech illustration of a giant wrecking ball being stopped by a glowing, futuristic robotic hand. In the background, a modern modular building is being assembled from glowing recycled concrete blocks. Title: 'Stop Smashing Things Like Toddlers'. Vibrant colors, comic-book meets cyberpunk style.",
+      "tags": [
+        "Urban Mining",
+        "Circular Economy",
+        "Design"
+      ],
+      "tagNotes": {
+        "Circular Economy": "# We Are Literally Running Out of Good Rocks (And How Microwaving Rubble Will Save Us)\nGrab your hard hats and your safety squints, folks, because things are about to get weird.\nImagine this scenario: You spend two years and a small fortune building a massive, gorgeous skyscraper. Fifty years later, it gets old, someone decides the lobby looks too \"retro,\" and we blow the whole thing up. What do we do with the millions of leftover pieces? We scoop them up, drive them out of town, and dump them into a giant hole in the ground.\nThen—and I cannot stress how ridiculous this is—we drive over to a *different* giant hole, dig up brand-new rocks, and haul them back to build a new building.\nDoes this make sense to anyone? No! Construction is a wild industry. We routinely find unexploded grenades in old walls, we pour liquid stone into wooden molds, and right now, we are burying perfectly good \"pre-loved rocks\" while panicking that we are running out of virgin dirt.\nLet me introduce you to the insanely high-tech, slightly chaotic system that is fixing this nonsense.\n## The Tragic Life Cycle of a Chunky Building Bit\nRight now, a whopping **40% of all the garbage** sitting in the world's landfills is just construction waste. That is a tragically boring thing to fill a dump with. For every single square meter of a demolished brick-and-mortar house, we are tossing about **1,000 kilograms** of perfectly good chunky building bits into the trash.\nWhy? Because when we smash a building, the rocks inside don't just pop out completely clean. They come out wearing what I like to call the *crusty, clingy backpack*—that old, dried-up gray glue that held the building together in its past life. Because of this crusty backpack, builders look at these rocks, declare them \"contaminated garbage,\" and demand fresh, naked rocks from the quarry.\n## Welcome to the Luxury Spa for Debris\nInstead of throwing these heavy nuggets away, brilliant scientists have designed a high-tech wellness retreat just for old rubble.\nFirst, the smashed building bits get a mechanical massage—literally tumbling them around to knock off the loose crust. But if they have a really stubborn crusty backpack, we treat them to a sauna. And by sauna, I mean **we stick them in a giant industrial microwave**. Yes, we are microwaving rocks. It heats the crust up from the inside until it pops right off like an old, itchy sweater.\nThen comes the breathing exercise. We lock these freshly cleaned rocks in a chamber and pump it full of pollution—specifically, the bad air we breathe out, carbon dioxide. Here is the magic part: the leftover gray glue actually *drinks* the bad air! A single ton of this mashed-up rubble can swallow up to **15 kilograms of CO2**, getting harder and stronger in the process.\nWe are literally tricking a demolished parking garage into cleaning the atmosphere while it gets swole.\n## Tinder for Pre-Loved Rubble\nOnce our chunky building bits are feeling fresh, it's time to get them back into the dating pool.\nWe have a whole tracking and testing framework that acts exactly like Tinder for smashed buildings. We test their strength, swipe right on the best ones, and match them with their perfect forever home. A super-strong, heavy-duty piece of an old bridge might get matched with a shiny new skyscraper. Meanwhile, a slightly weaker piece of a demolished strip mall might find love as the bottom layer of your new driveway.\nThe best part? Reusing these seasoned veterans of the construction world can slash material costs by a solid **20%**. That’s extra money in the foreman’s pocket for better coffee and maybe a laser level that actually works for once.\n## The Big Rock Smoothie of the Future\nIf you want to explain this to a 10-year-old, just think about Legos. When you finish playing with a Lego castle, you don't throw it in the garbage just because you want to build a spaceship. You break the castle apart, wipe off whatever sticky juice your little brother spilled on it, and you use those exact same blocks to build the spaceship.\nWe are finally doing that with entire cities. We are embracing the circular economy. Instead of treating the Earth like an endless buffet where we just take, take, take, we are making a giant Rock Smoothie out of the past to pour the foundations of the future.\n**The Big Wins:**\n * **We stop digging unnecessary holes.** (Save the virgin dirt!)\n * **We clean the sky.** (Making rocks eat pollution is undeniably cool.)\n * **We save cash.** (Cheaper materials mean happier builders.)\nSo next time you see a building coming down, don't just see a cloud of dust. Look closely, and you'll see millions of pre-loved chunky rocks getting ready for their spa day.",
+        "Urban Mining": "### Rock Smoothies & Building Passports: Why Your Old Driveway is Actually Gold\n\nImagine for a second that every time your phone screen cracked, you buried the whole phone in the backyard and went to dig a giant hole in a mountain to find the raw materials for a new one. Sounds like a plan made by someone who’s had a bit too much \"construction site coffee,\" right?\n\nWell, that is basically what we’ve been doing with buildings for decades. Every year, we produce billions of tons of demolition waste. Meanwhile, the U.S. is projected to need 2.5 billion tons of fresh rocks (aggregates) just to keep up with new roads and buildings. We are running out of the \"good rocks\" while literally burying a goldmine of \"pre-loved\" ones.\n\nHere is the plan to turn our \"rock smoothies\" into high-tech infrastructure.\n\n### 1. The \"Urban Mine\" (or, Extreme Reverse Tetris)\nInstead of just smashing a building with a giant iron ball and hoping for the best, we are proposing \"selective demolition.\" It’s like playing Tetris, but you’re taking the pieces out one by one. We separate the concrete from the wood, the steel, and the weird stuff.\n\nAnd trust us, demolition crews find weird stuff. We’re talking about hidden stashes of cash, human skulls (yikes!), gold teeth, and even live grenades. By cleaning out the \"building's secrets\" first, we get a high-purity stream of old concrete that is ready for its glow-up.\n\n### 2. The Rock Spa: Microwaves and Collisions\nOld concrete is basically a high-quality rock wearing a \"backpack\" of old, crusty glue (mortar). This backpack makes the rock thirsty—it absorbs way too much water.\n\nTo fix this, we give the rocks a spa day. We use Microwave Thermal Treatment. Just like your leftover pizza, the microwaves heat the rock from the inside out, causing the old glue to just... pop off. We also put them in a giant rotating drum where they bump into each other until they are as clean as a whistle. The result? Recycled aggregate that is just as strong as the stuff we dig out of the ground.\n\n### 3. Give That Rock a LinkedIn Profile\nIn the old days, if you used recycled concrete, people would look at you like you were building a skyscraper out of wet cardboard. To fix the \"trust issues,\" every batch of our recycled rock gets a Digital Material Passport.\n\nThink of it as a LinkedIn profile for a rock. It uses RFID tags and digital tracking to tell the builder exactly where the rock came from, how strong it is, and even how much CO_2 it’s currently sucking out of the air (up to 27 kg per ton!).No more mystery rocks.\n\n### 4. Is it Actually Safe?\nShort answer: Yes. Long answer: We’ve got the math to prove it. By using some clever \"squishiness\" adjustments (that’s the technical term for Modulus of Elasticity), engineers can design slabs and beams that are just as safe as traditional ones.\n\nIn fact, for road bases, this recycled stuff is often better than new rocks because it packs together tighter and can actually re-harden over time. It's basically \"zombie concrete\" that comes back to life to hold up your car.\n\n### The Big Win\nBy switching to this system, we can save about 17.5% on the total cost of a project. We also stop digging giant holes in the Earth and stop filling up our landfills with \"dead\" buildings.\n\nSo, the next time you see a building being torn down, don't just see a mess. See a future highway, a high-rise apartment, or a very fancy \"pre-loved\" bridge. As the old construction saying goes: \"It’s a house, not a dairy farm\"—so let’s stop milking the planet and start using what we’ve already got."
+      },
+      "read_time": "8 min read",
+      "excerpt": "We are currently throwing away about 40% of everything we build. Enter Project CIRCULUS: turning your building's mid-life crisis into a high-performance, modular rebirth.",
+      "fullContentUrl": "#",
+      "markdown_content": "Let’s be honest: the construction industry is that one neighbor who buys a brand-new IKEA bookshelf, realizes it’s 2cm too wide, and instead of returning it, smashes it with a sledgehammer and buys another one. We are currently throwing away about 40% of everything we build, mostly by hitting it with a giant metal ball on a chain like it’s a 1920s cartoon.\n\nEnter Project CIRCULUS. We’re tired of \"downcycling\" (taking high-quality structural concrete and turning it into a very expensive gravel road). We want to turn your building’s mid-life crisis into a high-performance, modular rebirth. Here is how we’re making \"Urban Mining\" actually cool.\n\n### 1. The \"Aggregates-Only\" Spa Day\nBefore we can build the future, we have to cook the past. In the CIRCULUS workflow, we don't just \"demolish\"; we perform \"selective deconstruction\". We take the old structural debris and give it the Thermal-Mechanical Treatment (TMT). This involves slow-roasting the rubble at 250^{\\circ}C for two hours.\n\nWhy? Because it makes the \"adhered mortar\" (the clingy ex-boyfriend of the construction world) brittle enough to be scrubbed off in a ball mill. Then, we give the rocks a CO_2 facial—accelerated carbonation at 75% relative humidity—which fills their pores with CaCO_3 and makes them denser and less thirsty for water. By the time they’re done, these recycled aggregates have better stats than the virgin stones fresh out of the quarry.\n\n### 2. The \"Cement-Free\" Secret Sauce\nPortland cement is so 2024. CIRCULUS uses Geopolymer Binders made from Ground Granulated Blast-furnace Slag (GGBS) and Fly Ash. We activate this industrial \"waste\" with an alkaline solution (14M molarity, for the chemistry nerds) to create a matrix that bonds to recycled aggregate better than traditional cement ever could.\n\nThe result? A C35/45 strength class that can seal its own wounds. We add crystalline self-healing admixtures that sit dormant until a crack appears. The moment water touches them, they grow needle-like C-S-H crystals to seal the gap. It’s basically Wolverine, but in a gray, load-bearing format.\n\n### 3. Swipe Right on Your Wall Panel\nEvery CIRCULUS module is a \"Building as Material Bank\" (BAMB) asset. We don't use \"wet joints\" (poured concrete) because that's a permanent commitment no one is ready for. Instead, we use High-Strength Bolted Tension Connections. If you want to move your building across town, you just unbolt it like a giant Lego set.\n\nBut how do you keep track of 5,000 slabs? Each one gets an RFID tag embedded 50mm deep. These tags are tough enough to survive a 2.5m drop and can be read by a scanner at 3 m/s. This tag links to a Digital Material Passport, which is basically a LinkedIn profile for your wall. You can check its \"skills\" (compressive strength), its \"work history\" (which building it used to be a part of), and its \"availability\" for future projects.\n\n### 4. Industrial Honesty: Rubble is the New Terrazzo\nFinally, let's talk aesthetics. We’re done hiding concrete behind boring white drywall. We’re pushing \"Industrial Honesty\". We polish the surface to a honed finish, exposing the \"mosaic\" of its previous life: flecks of red terracotta brick, muted gray structural concrete, and the crystalline shimmer of crushed glass fines.\n\nAnd because we want your building to do some chores, the exterior is coated in TiO_2 (Titanium Dioxide). When sunlight hits the wall, it triggers a photocatalytic reaction that eats nitrogen oxides (NO_x) out of the air. It has a 77.5% removal efficiency—so your building isn't just standing there; it's literally scrubbing the neighborhood’s lungs.\n\nThe Takeaway: In a CIRCULUS world, a \"demolition site\" is just a \"vintage structural quarry,\" and a pile of rubble is just a building that hasn't been unbolted yet. Welcome to the infinite loop."
+    },
+    {
+      "id": "blog3",
+      "title": "Your New Career Choice: Professional Human Power Plant",
+      "poster": "https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?q=80&w=400&h=600&fit=crop",
+      "poster_prompt": "High-tech sci-fi movie poster in 27x40 vertical for 'The Human Power Plant,' showing a crowded futuristic subway station where glowing energy trails follow commuters' footsteps, a sleek, modern energy harvester embedded in the floor glowing under the neon lights, top title in a sharp, futuristic font: 'Your New Career Choice: Professional Human Power Plant,' bottom tagline: 'Powering the Future, One Step at a Time,' footer: 'A Menkir Wolde Analysis | Engineering a Cleaner Earth | Energy, Reimagined.' A palette of deep city tones, neon greens, and electric blues, creating a powerful and energetic atmosphere.",
+      "tags": [
+        "Piezoelectricity",
+        "Technical Manual",
+        "Wearables"
+      ],
+      "tagNotes": {
+        "Technical Manual": "# We Are All Just Meat Batteries Now (And Why PZT Needs to Die)\nIn this 2026 fever-dream of an economy, I spend a lot of time staring at floor tiles. Fifteen years in renewable energy materials will do that to a person. You literally stop seeing the ground. Just wasted potential. Tiny electrical screams dying in the carpet. My lab currently smells like ozone and three-day-old injera. I’m exhausted. Let's talk about piezoelectricity.\n### The Shibuya Delusion\nCorporate executives absolutely love to evangelize about the \"smart city.\" Have you seen the Shibuya station pilots? Madness. They laid down these piezoelectric mats so the daily stampede of Tokyo commuters could power a few blinking LED signs. Management wept with joy at the press conference. I just looked at the raw voltage data.\nThen it hit me—we are literally building *The Matrix*.\nNo gooey pink pods, unfortunately. Instead, we’re trapped in sensible office loafers, actively powering the exact infrastructure that oppresses us with every miserable, caffeinated step toward our cubicles.\nHere is what actually happens under your shoes:\nThis formula basically means if you poke the crystal, it yells in electricity. More specifically, the electric displacement (D) is a function of the applied mechanical stress (T) multiplied by the piezoelectric coefficient. Forced labor at the atomic level. Electrons getting aggressively evicted from their comfortable lattice.\n### PZT’s Terrible Life Choices\nLet’s discuss PZT—Lead Zirconate Titanate. The undisputed industry darling. It is also a total diva.\nPZT is wildly efficient but stupidly, comically brittle. If this ceramic were a human being, it would demand imported artisanal spring water and then shatter its own femur stepping off a curb. Plus, it’s mostly made of lead. The European Union is finally putting a stop to this nonsense. RoHS Exemption 6c dies on June 30, 2027. Tick tock. We have barely a year to stop lining our transit hubs with toxic heavy metals, and the panic in the sector is palpable.\n### The Altoid Incident\nSo, everyone is scrambling to KNN. Potassium Sodium Niobate. Lead-free, theoretically great, but an absolute nightmare to sinter properly.\nDuring a brutal 72-hour hackathon last month, I hallucinated slightly and found a little white disc sitting next to my keyboard. I thought it was a rogue mint. Nope. It was a pressed KNN ceramic sample. I actually put it in my mouth and chewed. Tasted like dirt and bad decisions. I lived to tell the tale, however. Try casually snacking on PZT and let me know how your nervous system handles it.\nBut the real metric keeping me awake at night is the electromechanical coupling factor:\nThis formula basically translates to: how much of your physical, commuting suffering is actually converted into useful work, versus how much is just wasted as a pathetic elastic bounce. Usually? It's a lot of bounce.\n### The 2030 Parasitic Nightmare\nLook ahead to 2030. The \"Battery-less IoT\" explosion is rushing toward us. Every weird little environmental sensor, smart tag, and corporate ID badge is going to harvest its own energy from ambient movement. No more toxic coin cells rotting in landfills.\nThank god for that.\nBut it also means our environment is going to get hungry. Your smartwatch will literally feed off the vibration of your pulse. The subway tiles will eat your footsteps. From an engineering standpoint, it’s genuinely thrilling. I love it. I am also deeply terrified that by 2032, my smart-fridge will refuse to open unless I do fifteen vigorous jumping jacks to power the door latch.\nAnyway. I need sleep. Stop designing with lead. Sinter your KNN properly or don't bother showing up to the conference. Keep stepping heavily, folks. The grid needs your kinetic despair.",
+        "Piezoelectricity": "Piezoelectric floor mats convert the kinetic energy of human footsteps into usable electricity through a multi-stage process involving mechanical deformation, electrical rectification, and regulated storage.\n\n1. Capturing the Footstep (Mechanical Strain)\n\nThe process begins when a person steps on the mat, applying vertical ground reaction force (GRF) to the surface. This physical stress is transmitted to piezoelectric materials embedded within the mat, such as Lead Zirconate Titanate (PZT) or flexible Polyvinylidene Fluoride (PVDF). At the atomic level, this mechanical stress shifts the center of gravity of internal charges, creating an electric dipole moment. This phenomenon, known as the direct piezoelectric effect, transforms mechanical work into an internal electrical polarization.\n\nTo maximize this energy, commercial mats often use specialized architectures:\n\nMechanical Amplification: Since the actual displacement from a footstep is negligible, mats may use two-stage force-amplification mechanisms or flexure hinges to increase the strain on the piezoelectric elements.\n\nMechanical Amplification: Since the actual displacement from a footstep is negligible, mats may use two-stage force-amplification mechanisms or flexure hinges to increase the strain on the piezoelectric elements.\n\n2. Converting AC to DC (Rectification)\n\nThe raw electrical output from a piezoelectric material is disordered AC (alternating current), characterized by high-voltage peaks but very low current. To make this electricity usable for electronics, it must be converted to DC (direct current).\n\nFull-Bridge Rectifiers: The AC signal is passed through a rectifier circuit, often utilizing Schottky diodes because their low forward voltage drop minimizes energy loss during conversion.\n\nSSHI Technology: Advanced systems employ Synchronized Switch Harvesting on Inductor (SSHI) circuits. These circuits use a switch synchronized with the peaks of the piezoelectric voltage to reverse the charge at each vibration half-cycle, which can increase harvesting efficiency by up to 300%.\n\n4. Usable Output\n\nA single footstep on a commercial mat typically produces between 3 to 5 watt-seconds (joules) of energy. While small, this \"tangible spark\" is sufficient to power localized, low-power applications such as:\n\nInteractive LED lighting triggered by movement.\n\nUSB charging stations for mobile devices.\n\nWireless sensors and digital signage in smart city infrastructure.\n\nData analytics, where the mat acts as a sensor to track real-time foot traffic patterns and pedestrian flow.",
+        "Wearables": "I was standing in Shibuya Station last Tuesday—right there in the middle of that famous \"Scramble\" crossing—and I had this weird, almost dizzy realization that I was basically a walking battery. I could smell the faint, damp scent of ozone and overpriced lattes while the ground hummed beneath my feet. It’s funny because, in Japan, they’ve actually been doing this for years, putting these \"power mats\" under ticket gates. But here’s the thing that’s currently blowing my mind: we are essentially living through a \"Great Squeeze.\"\n\nThat’s what piezoelectricity is, really. It’s derived from the Greek piezin, which means to press or squeeze. When you stomp, skip, or just drag your feet because you’re tired of existing, you’re stressing out these crystals—non-centrosymmetric ones, if you want to get all technical and formal—and they react by throwing a literal temper tantrum of electrons.\n\nThe Lead-Free Panic of 2027\n\nOkay, so I have a confession. I used to think all crystals were just for \"vibes\" and healing, but these ones actually do work. Traditionally, everyone used PZT (Lead Zirconate Titanate). It’s the \"gold standard\" because it has this massive electromechanical coupling, but—and it’s a big but—it’s full of lead. And the EU is basically about to ban the stuff, with exemptions for lead in electronics expiring in June 2027. So, the labs are frantically pivoting to KNN (Potassium Sodium Niobate). It’s like the vegan leather of the engineering world; it’s supposed to be better for the planet, and surprisingly, some new single-crystal KNN variants are hitting piezoelectric coefficients of 9000 pm/V, which is actually insane.\n\nWait, I just remembered that terrible AI-generated McDonald's ad in the Netherlands from last year. Remember how people called it \"soulless\" and \"uncanny\"? That’s kind of how we treat energy—it’s this invisible, soulless thing—but piezoelectricity makes it personal. It’s your step lighting that LED.\n\nHow to Build a Foot-Powered Empire (Or Just Charge a Phone)\n\nIf you wanted to build one of these (and why wouldn't you?), you’ve got to deal with the \"Frequency Mismatch.\" Humans walk at a leisurely 1 to 2 Hz. Crystals want to vibrate like a hummingbird on espresso—thousands of times per second.\n\nStep 1: The Sandwich. You need a \"layered sandwich\" of electrodes and piezo material.\nStep 2: The Lever. You can’t just squash it. You need \"force amplification\" mechanisms, like the two-stage compliant frames that can boost a measly footfall into a 110.2 mW peak power burst.\nStep 3: The Brains. You need an Arduino Nano (they're cheap and adorable) and a bridge rectifier to fix the electricity so it doesn't just jitter around as AC.\n\nI saw this one project called \"StepGen\" that used a vertical rod-tap system. It only gives about 1 mW per step, but if you have a thousand people... well, the math starts to look like actual money.\n\nWhy Everything Isn't a Dance Floor (Yet)\n\nNow, don't go trying to power your house with a treadmill just yet. There are problems. Huge ones. These tiles are expensive—like $30,000 for just eight slabs sometimes. Plus, after about 800,000 steps, the piezo layers start to get these tiny, depressing micro-cracks. It’s like how my knees feel after a long hike. The materials just... give up.\n\nAnd there’s this hilarious confusion between \"Kinetic\" and \"Piezo.\" Companies like Pavegen actually use electromagnetic induction—like a tiny generator spinning—which is way more efficient for big floors. Piezo is the underdog. It’s for the \"niche\" stuff, like self-powered 6G sensors that live inside bridges or shoes that track your health without ever needing a recharge.\n\nThe 2030 Vibe\n\nBy 2030, we’re looking at \"Bio-inspired\" harvesters. I read about a guy who built one based on the wing-flapping of a seagull to catch random vibrations. Or the \"Kangaroo Leg\" structure for isolating low-frequency jolts. It’s all very \"mad scientist meets National Geographic.\"\n\nIs it the solution to the climate crisis? Honestly, probably not by itself. The energy yield is small, let’s be real. But as a way to power the 25 billion IoT devices coming our way by 2025? It's perfect."
+      },
+      "read_time": "5 min read",
+      "excerpt": "Welcome to late 2025, where your dreams of becoming a walking AA battery are finally coming true through piezoelectricity.",
+      "fullContentUrl": "#",
+      "markdown_content": "Have you ever looked at a crowded subway station and thought, \"Man, if only I could harvest the raw, unbridled rage of these late commuters and use it to charge my phone\"? Well, welcome to late 2025, where your dreams of becoming a walking AA battery are finally coming true.\n\nThe secret? Piezoelectricity. It’s not a fancy Italian dish; it’s the science of \"squeezing\" crystals until they give you electricity. Specifically, we’re talking about materials with non-centrosymmetric crystalline structures that, when stressed, shift their internal charge centers to create a potential difference.\n\nHere is the roadmap to how you—yes, you—can become a literal pillar of the green energy revolution just by walking to the fridge.\n\n### 1. The Science of the \"Stomp\"\nAt the heart of this technology is the \"direct piezoelectric effect.\" When you step on a piezoelectric material, you’re messing with its atomic balance, inducing a dipole moment. In engineering terms, we live for the d_{33} mode—where the force of your foot and the resulting electrical charge are perfectly aligned.\n\nThe math behind your morning jog looks a bit like this:\n\n### 2. The Great Material Bake-Off (2025 Edition)\nIn the old days (like, 2023), we used Lead Zirconate Titanate (PZT). It was efficient but, you know, full of lead. With the European Union’s RoHS exemption for lead in electronics expiring on June 30, 2027, the lab coat crowd is panicking—in a very productive way.\n\nEnter the new contenders:\n*   **KNN (Potassium Sodium Niobate):** The vegan, lead-free alternative that’s currently the \"it\" material of 2025. It can reach a piezoelectric charge coefficient (d_{33}) of up to 300 pC/N.\n*   **Silver-Modified PVDF:** Researchers have started \"doping\" flexible polymers with silver nanoparticles. A recent breakthrough in 2025 used a silver-modified PZT/PVDF composite to generate a peak voltage of 14.33 V—that’s 2.6 times higher than your average boring plastic harvester.\n*   **Nano-Moly:** Incorporating 2D molybdenum diselenide (MoSe_{2}) into wearable harvesters has achieved power densities of 680 \\mu W/cm^{2}.\n\n### 3. The Shibuya Station Power-Flex\nIf you think your steps don't matter, tell that to the 3.8 million people passing through Tokyo’s Shibuya Station every day. Japan has been a pioneer in \"Power-Generating Sidewalks,\" using mats that turn the kinetic energy of millions of commuters into electricity for LED displays and ticketing systems.\n\nEven a \"lowly\" two-stage force-amplification mechanism in a shoe can now hit an average power of 34.3 mW and a peak of 110.2 mW just by walking.\n\n### 4. Why Isn't Everything Powered by High-Heels Yet?\nThere’s a catch. Human walking is \"low frequency\" (around 1-2.5 Hz), but crystals like to vibrate fast—like, \"thousands of times per second\" fast. This is called the \"frequency mismatch.\"\n\nTo solve this, 2025 engineers are using:\n*   **Magnetic Plucking:** Using magnets to \"pluck\" a piezo beam so it vibrates at its own high frequency, yielding 10 times more electricity than just squashing it.\n*   **Bistable \"Snap-Through\" Designs:** Inspired by seagull wings, these harvesters use \"snap-through\" buckling to turn a slow movement into a high-velocity vibration.\n\n### 5. The Future: 6G and Battery-Less Living\nBy 2030, we expect these systems to be everywhere. Why? Because the world is going to have 40 billion IoT devices by 2034, and nobody wants to change 40 billion tiny batteries. Piezoelectric harvesters are the key to the \"Net Zero\" electronics movement, powering everything from 6G sensors to \"smart\" shoes that monitor your health while you hunt for the best avocado toast in the city.\n\nSo, the next time someone tells you to \"get moving,\" just tell them you’re busy recharging the local grid. It’s not a walk; it’s a decentralized power contribution."
+    },
+    {
+      "id": "blog1",
+      "title": "Comprehensive Overview of Floating Solar (FPV) Technology",
+      "poster": "/images/fpv_poster_1779040094907.webp",
+      "poster_prompt": "Lush romanticism movie poster in 27x40 vertical for 'Suns on the Water,' depicting a vast, serene reservoir at sunset with floating solar panels stretching towards the horizon like a metallic lily pad field, golden light glinting off the water and panels, top title in elegant script: 'Suns on the Water: A Floating Solar Saga,' bottom tagline: 'Power Harvested from Reflection,' footer: 'Scripted by Menkir Wolde | A Story of Innovation and Conservation | Energy, Reimagined.' Soft, warm color palette with a dreamy, romantic atmosphere.",
+      "tags": [
+        "Technical Manual",
+        "Design"
+      ],
+      "read_time": "18 min read",
+      "excerpt": "Harnessing the sun's power on water, FPV tech promises enhanced efficiency, water conservation, and a new frontier for clean energy.",
+      "fullContentUrl": "#",
+      "video_overview_url": "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-solar-farm-4952-large.mp4",
+      "markdown_content": "Floating solar, or Floating Photovoltaics (FPV) (sometimes referred to as \"floatovoltaics\"), is an innovative approach to solar energy generation. It involves mounting solar panels on buoyant structures—or floats—out on large water bodies such as reservoirs, lakes, and ponds. This strategy captures the sun's power without occupying valuable land space.\n\n## How Floating Solar Systems Work\nThe core electrical principles of FPV systems mirror those of traditional ground-mounted or rooftop systems, but the infrastructure is adapted for the water environment.\n\n### Power Generation Flow\n1.  **Generation:** The solar panels capture sunlight and generate Direct Current (DC) electricity.\n2.  **Collection:** Cables carry this DC power to a combiner box, which gathers the power from different groups (strings) of panels.\n3.  **Conversion:** The power then moves to an inverter, which changes the DC power into Alternating Current (AC) power, the type used by the grid. Systems may use large central inverters or smaller string inverters distributed across the platform.\n4.  **Transmission Prep:** Next, the AC power usually goes to a transformer, which steps up (makes higher) the voltage. Higher voltage cuts down on power loss when sending electricity over long distances.\n5.  **Grid Connection:** This high-voltage AC power is sent through special underwater or overwater cables to the shore, where the transmission system connects it to the substation and the main electrical grid.\n\n### Essential System Components\nA functioning floating solar system requires specialized parts designed to operate in a wet environment:\n\n| Component | Description and Requirements |\n|---|---|\n| **Solar Panels** | Convert sunlight into DC electricity. Must be efficient, tough, and resistant to humidity and changing temperatures. |\n| **Floaters/Pontoons** | Platforms that keep the system afloat. Typically made of durable, sun-resistant plastic like HDPE that resists rust. They must safely hold panels at the best angle and be strong enough for wind, waves, and sometimes ice. |\n| **Mooring System** | Crucial for security, anchoring the entire setup to stop it from drifting due to wind, currents, or waves. Includes anchors and mooring lines chosen based on water depth, bottom composition, and environmental forces. |\n| **Cabling** | A network of special waterproof, sun-proof, and rust-proof cables (DC and AC) to move power and data. |\n| **Monitoring System** | Known as SCADA (Supervisory Control and Data Acquisition), this system acts as the \"brain,\" tracking real-time data on power output, component health, and weather conditions. |\n\n\n\n## Video Overview\nHere's a quick visual summary of the key concepts in Floating Solar technology.\n\n[VIDEO_PLAYER]\n\n**Nexus Link:** This video overview connects to our ongoing research in the 'Renewable Synergy' workspace within the Notes Pages Nexus, tracking the interplay between FPV, Green Hydrogen, and Geothermal energy solutions.\n\n## Advantages of Floating Solar\nFloating solar systems offer numerous benefits, particularly in land-constrained or drought-prone areas.\n\n*   **Land Preservation:** FPV utilizes otherwise untapped water areas, alleviating the need to use valuable land space for energy generation.\n*   **Enhanced Efficiency (Natural Cooling):** The water body underneath provides a natural cooling effect, boosting power output by up to 15% compared to land-based panels.\n*   **Water Conservation:** The shading provided by the panels significantly reduces water evaporation.\n*   **Improved Water Quality:** By inhibiting sunlight penetration, FPV installations can help control the growth of harmful algae.\n*   **Albedo Effect:** Water's reflective properties can reflect sunlight back onto the panels, increasing the energy yield.\n*   **Co-location Benefits:** FPV pairs well with existing hydroelectric plants, providing a clean energy source that can offset the plant's emissions.\n\n## Challenges and Disadvantages\nDespite the benefits, FPV technology faces specific challenges regarding cost, complexity, and environmental impact.\n\n*   **Higher Initial Cost:** Installation is generally more expensive than ground-mounted systems due to specialized equipment and anchoring.\n*   **Mainly Large-Scale:** FPV is typically designed for utility companies, not individual homes.\n*   **Impact on Aquatic Life:** Floating panels block sunlight, which can affect dependent plants and aquatic life. It's often recommended for man-made water bodies.\n*   **Harsher Environment & Durability:** Components must withstand high wind speed, water erosion, and corrosion. Long-term durability over a 25-year lifespan needs further data.\n*   **Installation Complexity:** The complex mooring and anchoring systems require careful site selection and strict safety precautions.\n\n## Maintenance and Long-Term Performance\nFloating solar systems are usually built to last 25 years or more and require specialized maintenance, including regular checks on panel cleanliness, structural integrity (moorings, anchors, floats), and electrical components to ensure they remain watertight and free from corrosion."
+    }
+  ],
+  "designs": [
+    {
+      "id": "design4",
+      "style": "Business / Productivity",
+      "name": "CRM — MenkiR",
+      "description": "A polished professional workspace helping freelancers, consultants, and small teams manage clients, projects, tasks, schedules, documents, templates, and finances in one connected platform. One CRM. One workspace. Complete control.",
+      "poster": "/images/crm_icon_v2.webp",
+      "poster_prompt": "A minimalist, high-fidelity app icon presentation for 'CRM — MenkiR' on a 9:16 vertical product card. The central focus is a bold, modern app icon that visually represents productivity and client management (e.g., stylized interconnected nodes, abstract growth charts, or a refined geometric 'M'). Clean, professional aesthetic, warm neutral background surfaces, refined gradients, subtle borders, and restrained metallic or corporate color accents. No UI dashboards—just the striking, premium iconography.",
+      "tech_stack": "Client Management, Project Tracking, Financials & Scheduling",
+      "price": "Free",
+      "install_url": "https://mont14yee-menkr-impo-3wd3.bolt.host/",
+      "rating": "4.9",
+      "reviews": "(12.5k)",
+      "hover_quip": "Manage Clients. Projects. Work.",
+      "downloads": "500K+",
+      "contentRating": "E",
+      "editorChoice": true,
+      "primaryButtonLabel": "Install",
+      "secondaryButtonLabel": "View Details",
+      "developer": "Menkir Wolde",
+      "screenshots": [
+        "/images/crm_screenshot_1-1.webp",
+        "/images/crm_screenshot_2.webp",
+        "/images/crm_screenshot_3.webp",
+        "/images/crm_screenshot_4.webp"
+      ]
+    },
+    {
+      "id": "design1",
+      "style": "Eco-Futurist",
+      "name": "WALLET: BUDGET TRACKING APP",
+      "description": "Eco-smart tracker that plants your pennies into forests of fortune—multilingual magic for global greenbacks!",
+      "poster": "https://picsum.photos/seed/budget-bloom/400/711",
+      "poster_prompt": "Cinematic eco-futurist app store poster in 9:16 vertical for 'Budget Bloom,' a holographic wallet sprouting verdant money trees with Amharic leaves and English roots in a solar-powered Ethiopian savanna, glowing emerald and solar-yellow palette with vine-like charts climbing toward infinity. Top app icon title in leafy sans-serif: 'Budget Bloom: Green Gains.' Bottom blurb: 'Track, Grow, Thrive—Multilingual Money Mastery Awaits.' Footer: 'Developed by Menkir Wolde | 4.9 Stars | Eco-Engineered for Earthlings | Install Now & Watch Wealth Wildfire.' Radiant lens flares, particle seed confetti for sustainable sparkle.",
+      "tech_stack": "Powered by Figma, React Native & Currency APIs",
+      "price": "Free",
+      "install_url": "https://wallet-premium-860900490614.europe-west1.run.app/",
+      "rating": "4.9",
+      "reviews": "(3.1k)",
+      "hover_quip": "Downloaded more times than bad advice—try it, your bank will thank you!",
+      "downloads": "500K+",
+      "contentRating": "E",
+      "editorChoice": true,
+      "primaryButtonLabel": "Download APK (Direct)",
+      "secondaryButtonLabel": "Verified Mirror: t.me/frontenddesigns",
+      "developer": "Menkir Wolde",
+      "screenshots": [
+        "https://picsum.photos/seed/budget-bloom-screen1/400/711",
+        "https://picsum.photos/seed/budget-bloom-screen2/400/711",
+        "https://picsum.photos/seed/budget-bloom-screen3/400/711"
+      ]
+    },
+    {
+      "id": "design3",
+      "style": "Education / Engineering",
+      "name": "CIVIL ENGINEERING FORMULA",
+      "description": "A professional reference app helping students and engineers discover formulas, perform calculations, and visualize structural behavior instantly.",
+      "poster": "/images/formula_app_preview.webp",
+      "poster_prompt": "Cinematic, modern app store poster for 'CIVIL ENGINEERING FORMULA', featuring blueprint schematics, bridge structures, and structural calculation diagrams overlaid on a clean, professional dark mode UI. Bright accents of construction yellow and blueprint blue. Top title: 'CIVIL ENGINEERING FORMULA'. Tagline: 'Every Formula. One Place.'",
+      "tech_stack": "Calculators, Schematics, Diagrams & References",
+      "price": "Free",
+      "install_url": "#",
+      "rating": "4.9",
+      "reviews": "(4.2k)",
+      "hover_quip": "Every Formula. One Place. Discover → Understand → Calculate → Visualize.",
+      "downloads": "100K+",
+      "contentRating": "E",
+      "editorChoice": true,
+      "primaryButtonLabel": "Install",
+      "secondaryButtonLabel": "Learn More",
+      "developer": "Menkir Wolde",
+      "screenshots": [
+        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=400&h=711&fit=crop",
+        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=400&h=711&fit=crop",
+        "https://images.unsplash.com/photo-1504307651254-35680f356f12?q=80&w=400&h=711&fit=crop"
+      ]
+    }
+  ],
+  "connect": [
+    {
+      "id": "email",
+      "title": "Email",
+      "poster": "https://images.unsplash.com/photo-1594980595466-9d5a15325459?q=80&w=400&h=600&fit=crop",
+      "subtitle": "Direct Connection",
+      "prompt": "Let's build something great together.",
+      "finePrint": "Open for inquiries and collaborations.",
+      "url": "mailto:mon14ye@gmail.com"
+    },
+    {
+      "id": "telegram",
+      "title": "Telegram",
+      "poster": "https://images.unsplash.com/photo-1611643915743-306e3c54215d?q=80&w=400&h=600&fit=crop",
+      "subtitle": "Direct Message",
+      "prompt": "Let's have a quick chat.",
+      "finePrint": "Ideal for quick questions and conversations.",
+      "url": "https://t.me/Menkiree"
+    },
+    {
+      "id": "linkedin",
+      "title": "LinkedIn",
+      "poster": "https://images.unsplash.com/photo-1611944212129-2994cb139e01?q=80&w=400&h=600&fit=crop",
+      "subtitle": "Professional Profile",
+      "prompt": "View my career journey.",
+      "finePrint": "Connect for professional networking.",
+      "url": "https://www.linkedin.com/in/menkir-wolde-32a1a4108"
+    },
+    {
+      "id": "instagram",
+      "title": "Instagram",
+      "poster": "https://images.unsplash.com/photo-1616469829935-c2f3346e0b8e?q=80&w=400&h=600&fit=crop",
+      "subtitle": "Project Snapshots",
+      "prompt": "Follow for behind-the-scenes views.",
+      "finePrint": "A visual diary of engineering marvels.",
+      "url": "https://www.instagram.com/menkirwolde?igsh=MTY4Nmh1N2FtMHVrNg=="
+    },
+    {
+      "id": "youtube",
+      "title": "YouTube",
+      "poster": "https://picsum.photos/seed/youtube-channel/400/600",
+      "subtitle": "Visual Stories",
+      "prompt": "Subscribe for video content.",
+      "finePrint": "Engineering, design, and life lessons in motion.",
+      "url": "https://youtube.com/@menkir127"
+    },
+    {
+      "id": "tiktok",
+      "title": "TikTok",
+      "poster": "https://picsum.photos/seed/tiktok-channel/400/600",
+      "subtitle": "Quick Insights",
+      "prompt": "Follow for short-form content.",
+      "finePrint": "Quick tips, project snippets, and creative sparks.",
+      "url": "https://www.tiktok.com/@menkirteamir"
+    }
+  ],
+  "videos": [
+    {
+      "id": "vid1",
+      "title": "Green Roof Technology",
+      "thumbnail_url": "https://picsum.photos/seed/green-roof/400/711",
+      "prompt": "A cinematic, 4K documentary style drone shot sweeping over a massive urban skyscraper with a lush, vibrant green roof. The roof is covered in dense vegetation, solar panels, and small water features, contrasting with the concrete jungle below. Golden hour lighting, high production value, photorealistic.",
+      "duration": "4:15",
+      "tags": [
+        "Sustainable Architecture",
+        "Green Roof",
+        "Urban Design"
+      ],
+      "isWebinar": false,
+      "quip": "Nature reclaiming the skyline."
+    },
+    {
+      "id": "vid2",
+      "title": "Trumpet Interchange Design",
+      "thumbnail_url": "https://picsum.photos/seed/trumpet-interchange/400/711",
+      "prompt": "A high-octane 4k drone timelapse of a beautifully designed trumpet interchange on a major highway. Long exposure light trails from cars weaving through the elegant, sweeping curves of the interchange. Neon lights, cyberpunk aesthetic, smooth motion blur, highly detailed.",
+      "duration": "2:30",
+      "tags": [
+        "Infrastructure",
+        "Civil Engineering",
+        "Interchange"
+      ],
+      "isWebinar": false,
+      "quip": "The art of seamless flow."
+    },
+    {
+      "id": "vid3",
+      "title": "Recycled Concrete Aggregate (RCA)",
+      "thumbnail_url": "https://picsum.photos/seed/recycled-concrete/400/711",
+      "prompt": "A fascinating macro video showing the process of recycled concrete aggregate being mixed into a new, highly durable foundation. Dust particles floating in the air, dramatic rim lighting, industrial aesthetic. The texture of the crushed concrete is hyper-detailed.",
+      "duration": "1:45",
+      "tags": [
+        "Materials",
+        "Sustainability",
+        "RCA"
+      ],
+      "isWebinar": false,
+      "quip": "Rebuilding from the rubble."
+    },
+    {
+      "id": "vid4",
+      "title": "Piezoelectric Energy Harvesting",
+      "thumbnail_url": "https://picsum.photos/seed/piezoelectric/400/711",
+      "prompt": "A sleek, sci-fi style animation of a busy pedestrian walkway equipped with piezoelectric flooring. Every footstep glows with electric blue energy, transferring power down into a high-tech grid under the translucent tiles. Ray-traced reflections, futuristic lighting.",
+      "duration": "3:20",
+      "tags": [
+        "Energy",
+        "Piezoelectricity",
+        "Innovation"
+      ],
+      "isWebinar": false,
+      "quip": "Power generated with every step."
+    }
+  ]
+}

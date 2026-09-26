@@ -1,0 +1,13 @@
+node_modules
+dist
+.env
+.env.*
+.git
+.github
+*.log
+*.py
+*.cjs
+*.mjs
+test_*.js
+patch_*.js
+scripts/archive

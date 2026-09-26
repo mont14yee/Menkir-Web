@@ -1,11 +1,19 @@
-<div align="center">
+# Google Cloud Run Deployment
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+This project is configured for deployment on Google Cloud Run using NGINX to serve the statically built React application.
 
-  <h1>Built with AI Studio</h2>
+## Files added for deployment:
+- \`Dockerfile\`: A multi-stage build that first builds the React app, and then packages it with NGINX.
+- \`nginx.conf.template\`: The NGINX configuration file which sets up gzip compression, caching, SPA routing, and dynamically uses the \`PORT\` provided by Google Cloud Run.
+- \`.dockerignore\`: Helps to keep the Docker image small and the build fast by ignoring unnecessary files.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## How to Deploy to Cloud Run
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+1. Make sure you have the [Google Cloud CLI](https://cloud.google.com/sdk/docs/install) installed and authenticated.
+2. Run the following command from the root of this project:
+   \`\`\`bash
+   gcloud run deploy my-app-name --source . --region us-central1 --allow-unauthenticated
+   \`\`\`
+   This will automatically use the \`Dockerfile\` to build the container using Cloud Build and deploy it to Cloud Run.
 
-</div>
+Enjoy your highly concurrent, lightweight React application!
