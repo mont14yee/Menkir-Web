@@ -40,7 +40,7 @@
   "featured_designs": [
     "design4",
     "design1",
-    "design2"
+    "design3"
   ],
   "projects": [
     {
@@ -194,22 +194,24 @@
   "designs": [
     {
       "id": "design4",
-      "style": "Business / Productivity",
-      "name": "CRM — MenkiR",
-      "description": "A polished professional workspace helping freelancers, consultants, and small teams manage clients, projects, tasks, schedules, documents, templates, and finances in one connected platform. One CRM. One workspace. Complete control.",
-      "poster": "/images/crm_icon_v2.webp",
-      "poster_prompt": "A minimalist, high-fidelity app icon presentation for 'CRM — MenkiR' on a 9:16 vertical product card. The central focus is a bold, modern app icon that visually represents productivity and client management (e.g., stylized interconnected nodes, abstract growth charts, or a refined geometric 'M'). Clean, professional aesthetic, warm neutral background surfaces, refined gradients, subtle borders, and restrained metallic or corporate color accents. No UI dashboards—just the striking, premium iconography.",
-      "tech_stack": "Client Management, Project Tracking, Financials & Scheduling",
+      "style": "Productivity & Business",
+      "name": "MenkiR CRM",
+      "title": "MenkiR CRM",
+      "description": "Mobile-first business workspace engineered for freelancers and creative studios to coordinate clients, Kanban projects, billable sessions, and finances in one connected platform.",
+      "poster": "/images/crm_poster.webp",
+      "icon": "/images/menkir_crm_icon.svg",
+      "tech_stack": "React 19, TypeScript, Tailwind CSS & Vite",
       "price": "Free",
       "install_url": "https://mont14yee-menkr-impo-3wd3.bolt.host/",
+      "github_url": "https://github.com/mont14yee/MenkR-",
       "rating": "4.9",
       "reviews": "(12.5k)",
-      "hover_quip": "Manage Clients. Projects. Work.",
+      "hover_quip": "Manage Clients. Projects. Billable Work. One Workspace.",
       "downloads": "500K+",
       "contentRating": "E",
       "editorChoice": true,
-      "primaryButtonLabel": "Install",
-      "secondaryButtonLabel": "View Details",
+      "primaryButtonLabel": "Launch Web App",
+      "secondaryButtonLabel": "View Case Study",
       "developer": "Menkir Wolde",
       "screenshots": [
         "/images/crm_screenshot_1-1.webp",
@@ -220,36 +222,38 @@
     },
     {
       "id": "design1",
-      "style": "Eco-Futurist",
-      "name": "WALLET: BUDGET TRACKING APP",
-      "description": "Eco-smart tracker that plants your pennies into forests of fortune—multilingual magic for global greenbacks!",
-      "poster": "https://picsum.photos/seed/budget-bloom/400/711",
-      "poster_prompt": "Cinematic eco-futurist app store poster in 9:16 vertical for 'Budget Bloom,' a holographic wallet sprouting verdant money trees with Amharic leaves and English roots in a solar-powered Ethiopian savanna, glowing emerald and solar-yellow palette with vine-like charts climbing toward infinity. Top app icon title in leafy sans-serif: 'Budget Bloom: Green Gains.' Bottom blurb: 'Track, Grow, Thrive—Multilingual Money Mastery Awaits.' Footer: 'Developed by Menkir Wolde | 4.9 Stars | Eco-Engineered for Earthlings | Install Now & Watch Wealth Wildfire.' Radiant lens flares, particle seed confetti for sustainable sparkle.",
-      "tech_stack": "Powered by Figma, React Native & Currency APIs",
+      "style": "Finance & Analytics",
+      "name": "Wallet (ዋሌት) — Budget App",
+      "title": "Wallet (ዋሌት) — Budget App",
+      "description": "Bilingual personal finance and budget manager featuring real-time cash flow tracking, Blooming Flower visualizations, multi-currency conversion, and local-first data privacy.",
+      "poster": "/images/wallet_poster.webp",
+      "icon": "/images/wallet_icon.png",
+      "tech_stack": "React 19, TypeScript, Tailwind CSS, Recharts & IndexedDB",
       "price": "Free",
-      "install_url": "https://wallet-premium-860900490614.europe-west1.run.app/",
+      "install_url": "https://mont14yee-budget-imp-s9nf.bolt.host/",
+      "github_url": "https://github.com/mont14yee/Budget-",
       "rating": "4.9",
       "reviews": "(3.1k)",
-      "hover_quip": "Downloaded more times than bad advice—try it, your bank will thank you!",
-      "downloads": "500K+",
-      "contentRating": "E",
+      "hover_quip": "Budget like a pro with real-time multi-currency insights.",
+      "downloads": "100K+",
+      "contentRating": "Top Grossing Finance",
       "editorChoice": true,
-      "primaryButtonLabel": "Download APK (Direct)",
-      "secondaryButtonLabel": "Verified Mirror: t.me/frontenddesigns",
+      "primaryButtonLabel": "Launch Live Application",
+      "secondaryButtonLabel": "Explore Specs",
       "developer": "Menkir Wolde",
       "screenshots": [
-        "https://picsum.photos/seed/budget-bloom-screen1/400/711",
-        "https://picsum.photos/seed/budget-bloom-screen2/400/711",
-        "https://picsum.photos/seed/budget-bloom-screen3/400/711"
+        "/images/wallet_poster.webp",
+        "/images/wallet_icon.png"
       ]
     },
     {
       "id": "design3",
-      "style": "Education / Engineering",
-      "name": "CIVIL ENGINEERING FORMULA",
-      "description": "A professional reference app helping students and engineers discover formulas, perform calculations, and visualize structural behavior instantly.",
+      "style": "Engineering & Reference",
+      "name": "Civil Engineering Formula",
+      "title": "Civil Engineering Formula",
+      "description": "A structural engineering reference suite helping engineers and students calculate bending moments, shear forces, concrete stresses, and visualize structural load paths instantly.",
       "poster": "/images/formula_app_preview.webp",
-      "poster_prompt": "Cinematic, modern app store poster for 'CIVIL ENGINEERING FORMULA', featuring blueprint schematics, bridge structures, and structural calculation diagrams overlaid on a clean, professional dark mode UI. Bright accents of construction yellow and blueprint blue. Top title: 'CIVIL ENGINEERING FORMULA'. Tagline: 'Every Formula. One Place.'",
+      "icon": "/images/formula_app_preview.webp",
       "tech_stack": "Calculators, Schematics, Diagrams & References",
       "price": "Free",
       "install_url": "#",
@@ -259,13 +263,11 @@
       "downloads": "100K+",
       "contentRating": "E",
       "editorChoice": true,
-      "primaryButtonLabel": "Install",
-      "secondaryButtonLabel": "Learn More",
+      "primaryButtonLabel": "Request Spec & Prototype",
+      "secondaryButtonLabel": "View Details",
       "developer": "Menkir Wolde",
       "screenshots": [
-        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=400&h=711&fit=crop",
-        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=400&h=711&fit=crop",
-        "https://images.unsplash.com/photo-1504307651254-35680f356f12?q=80&w=400&h=711&fit=crop"
+        "/images/formula_app_preview.webp"
       ]
     }
   ],
@@ -277,7 +279,7 @@
       "subtitle": "Direct Connection",
       "prompt": "Let's build something great together.",
       "finePrint": "Open for inquiries and collaborations.",
-      "url": "mailto:mon14ye@gmail.com"
+      "url": "mailto:mon14yee@gmail.com"
     },
     {
       "id": "telegram",

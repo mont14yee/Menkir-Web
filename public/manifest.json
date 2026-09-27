@@ -1,0 +1,23 @@
+{
+  "name": "Menkir Wolde | Civil Engineer & Digital Product Architect",
+  "short_name": "MenkiR",
+  "description": "Professional engineering portfolio and digital product showcase of Menkir Wolde.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030303",
+  "theme_color": "#030303",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/wallet_icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

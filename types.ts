@@ -123,17 +123,20 @@ export interface ConnectLink {
 export interface Design {
   id: string;
   name: string;
+  title?: string;
   description: string;
   poster: string;
-  poster_prompt: string;
+  poster_prompt?: string;
+  icon?: string;
   install_url?: string;
   website_url?: string;
+  github_url?: string;
   price: string;
   rating: string;
   reviews: string;
   hover_quip: string;
   tech_stack: string;
-  style: 'Eco-Futurist' | 'Noir Thriller' | 'Retro Arcade' | 'Baroque Digital' | 'Sports-Live';
+  style: string;
   downloads?: string;
   contentRating?: string;
   editorChoice?: boolean;

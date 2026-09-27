@@ -4,7 +4,8 @@ import type { PortfolioData, Project, Blog, ConnectLink, Design, Video, View, Sl
 import { EmailIcon, InstagramIcon, LinkedInIcon, TelegramIcon, YouTubeIcon, TikTokIcon, ArrowPathIcon, SparklesIcon } from './IconComponents';
 import { generateContent, generateVideos, getVideosOperation, downloadVideo } from '../gemini-client';
 import { useSearch } from '../App';
-import { OptaScreen1, OptaScreen2, OptaScreen3, PhoneFrame } from './OptaMockups';
+import { MenkRScreen1, MenkRScreen2, MenkRScreen3 } from './MenkRMockups';
+import { PhoneFrame } from './OptaMockups';
 import { WalletScreen1, WalletScreen2, WalletScreen3 } from './WalletMockups';
 import { LifeScreen1, LifeScreen2, LifeScreen3 } from './LifeArchitectMockups';
 import { GildedScreen1, GildedScreen2, GildedScreen3 } from './GildedUIMockups';
@@ -951,56 +952,387 @@ const SlideshowModal: React.FC<{ slides: Slide[] | null; onClose: () => void; }>
 };
 
 
-// --- Design Store Components ---
-const DesignThumbnail: React.FC<{ design: Design; onInstallClick: () => void }> = ({ design, onInstallClick }) => {
-    const styleClasses: Record<Design['style'], string> = {
-        'Eco-Futurist': 'style-eco-futurist',
-        'Noir Thriller': 'style-noir-thriller',
-        'Retro Arcade': 'style-retro-arcade',
-        'Baroque Digital': 'style-baroque-digital',
-        'Sports-Live': 'style-sports-live',
-    };
+// --- Consistent Digital Product Icons ---
+const IconStar: React.FC<{ className?: string }> = ({ className = "w-3.5 h-3.5" }) => (
+    <svg className={className} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+    </svg>
+);
 
-    const buttonText = design.price === 'Free' ? 'Install' : design.price;
+const IconExternalLink: React.FC<{ className?: string }> = ({ className = "w-3.5 h-3.5" }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+    </svg>
+);
+
+const IconInfoCircle: React.FC<{ className?: string }> = ({ className = "w-3.5 h-3.5" }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+);
+
+const IconGitHub: React.FC<{ className?: string }> = ({ className = "w-3.5 h-3.5" }) => (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+    </svg>
+);
+
+const IconUsers: React.FC<{ className?: string }> = ({ className = "w-3.5 h-3.5" }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+    </svg>
+);
+
+const IconKanban: React.FC<{ className?: string }> = ({ className = "w-3.5 h-3.5" }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+    </svg>
+);
+
+const IconClock: React.FC<{ className?: string }> = ({ className = "w-3.5 h-3.5" }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+);
+
+const IconWallet: React.FC<{ className?: string }> = ({ className = "w-3.5 h-3.5" }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+    </svg>
+);
+
+const IconPieChart: React.FC<{ className?: string }> = ({ className = "w-3.5 h-3.5" }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+        <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+    </svg>
+);
+
+const IconLanguages: React.FC<{ className?: string }> = ({ className = "w-3.5 h-3.5" }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+    </svg>
+);
+
+const IconCalculator: React.FC<{ className?: string }> = ({ className = "w-3.5 h-3.5" }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+    </svg>
+);
+
+const IconCompass: React.FC<{ className?: string }> = ({ className = "w-3.5 h-3.5" }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm3.5 6.5l-2 5.5-5.5 2 2-5.5 5.5-2z" />
+    </svg>
+);
+
+// --- Redesigned Digital Product Card Component ---
+// Hierarchy:
+// 1. authentic application icon
+// 2. product name
+// 3. concise product category
+// 4. short factual description
+// 5. product-specific accent indicator
+// 6. rating/metadata area
+// 7. primary action
+// 8. secondary details action
+const DesignThumbnail: React.FC<{ design: Design; onInstallClick: () => void }> = ({ design, onInstallClick }) => {
+    const displayName = design.name || design.title || 'Digital Product';
+    const isMenkR = design.id === 'design4' || design.style.toLowerCase().includes('productivity') || displayName.toLowerCase().includes('menkir');
+    const isWallet = design.id === 'design1' || design.style.toLowerCase().includes('finance') || displayName.toLowerCase().includes('wallet');
+    const isFormula = design.id === 'design3' || design.style.toLowerCase().includes('engineering') || displayName.toLowerCase().includes('formula');
+
+    // Product-specific styling hooks
+    const accentClass = isMenkR ? 'accent-crm' : isWallet ? 'accent-wallet' : isFormula ? 'accent-formula' : 'accent-crm';
     
+    // 3. Concise product category
+    const categoryLabel = isMenkR 
+        ? 'Studio CRM & Operations' 
+        : isWallet 
+        ? 'Bilingual Personal Finance' 
+        : isFormula
+        ? 'Structural Engineering Suite'
+        : design.style;
+
+    // 5. Product-specific accent indicator
+    const accentIndicator = isMenkR ? (
+        <div 
+            className="flex items-center gap-1.5 text-[10px] font-mono font-semibold tracking-wider uppercase text-[#E7F45A] bg-[#E7F45A]/10 border border-[#E7F45A]/25 px-2 py-0.5 rounded-md"
+            aria-label="Product Accent: Studio OS"
+        >
+            <span className="w-1.5 h-1.5 rounded-full bg-[#E7F45A] group-hover:animate-pulse"></span>
+            <span>Studio OS</span>
+        </div>
+    ) : isWallet ? (
+        <div 
+            className="flex items-center gap-1.5 text-[10px] font-mono font-semibold tracking-wider uppercase text-emerald-300 bg-emerald-500/10 border border-emerald-500/25 px-2 py-0.5 rounded-md"
+            aria-label="Product Accent: Bilingual English and Amharic"
+        >
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            <span>EN · አማርኛ</span>
+        </div>
+    ) : (
+        <div 
+            className="flex items-center gap-1.5 text-[10px] font-mono font-semibold tracking-wider uppercase text-amber-300 bg-amber-500/10 border border-amber-500/25 px-2 py-0.5 rounded-md"
+            aria-label="Product Accent: Eurocode and ACI"
+        >
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+            <span>Eurocode · ACI</span>
+        </div>
+    );
+
+    // Secondary product information (Zero-pill discipline: unboxed metadata with icons and subtle separators)
+    const secondaryFeatureInfo = isMenkR ? (
+        <div className="flex items-center gap-2 text-[11px] text-slate-300 font-medium">
+            <span className="inline-flex items-center gap-1 text-slate-300">
+                <IconUsers className="w-3.5 h-3.5 text-[#E7F45A]" />
+                <span>Clients</span>
+            </span>
+            <span className="text-white/20" aria-hidden="true">·</span>
+            <span className="inline-flex items-center gap-1 text-slate-300">
+                <IconKanban className="w-3.5 h-3.5 text-[#E7F45A]" />
+                <span>Kanban</span>
+            </span>
+            <span className="text-white/20" aria-hidden="true">·</span>
+            <span className="inline-flex items-center gap-1 text-slate-300">
+                <IconClock className="w-3.5 h-3.5 text-[#F2A93E]" />
+                <span>Billable Time</span>
+            </span>
+        </div>
+    ) : isWallet ? (
+        <div className="flex items-center gap-2 text-[11px] text-slate-300 font-medium">
+            <span className="inline-flex items-center gap-1 text-slate-300">
+                <IconWallet className="w-3.5 h-3.5 text-emerald-400" />
+                <span>Cash Flow</span>
+            </span>
+            <span className="text-white/20" aria-hidden="true">·</span>
+            <span className="inline-flex items-center gap-1 text-slate-300">
+                <IconPieChart className="w-3.5 h-3.5 text-emerald-400" />
+                <span>Flower Chart</span>
+            </span>
+            <span className="text-white/20" aria-hidden="true">·</span>
+            <span className="inline-flex items-center gap-1 text-slate-300">
+                <IconLanguages className="w-3.5 h-3.5 text-emerald-300" />
+                <span>Dual Locale</span>
+            </span>
+        </div>
+    ) : (
+        <div className="flex items-center gap-2 text-[11px] text-slate-300 font-medium">
+            <span className="inline-flex items-center gap-1 text-slate-300">
+                <IconCalculator className="w-3.5 h-3.5 text-amber-400" />
+                <span>Moments</span>
+            </span>
+            <span className="text-white/20" aria-hidden="true">·</span>
+            <span className="inline-flex items-center gap-1 text-slate-300">
+                <IconCompass className="w-3.5 h-3.5 text-amber-400" />
+                <span>Deflections</span>
+            </span>
+            <span className="text-white/20" aria-hidden="true">·</span>
+            <span className="inline-flex items-center gap-1 text-slate-300">
+                <IconExternalLink className="w-3.5 h-3.5 text-amber-400" />
+                <span>Eurocode</span>
+            </span>
+        </div>
+    );
+
+    const platformLabel = isMenkR ? 'PWA' : isWallet ? 'Local-First' : 'Web Spec';
+
     return (
-        <div className={`design-card group ${styleClasses[design.style] || ''} cursor-pointer`} onClick={onInstallClick}>
-            <div className="design-card-image-wrapper">
-                <img width="400" height="600" src={design.poster} alt={design.name} loading="lazy" />
-            </div>
-            
-            <div className="design-card-content">
-                 <div className="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80 flex items-center justify-center text-center z-10 backdrop-blur-sm">
-                    <p className="text-base font-bold italic text-white leading-relaxed">"{design.hover_quip}"</p>
-                </div>
-                
-                <h3 className="design-card-title">{design.name}</h3>
-                <p className="design-card-desc">{design.description}</p>
-                
-                <div className="design-card-meta">
-                    <div className="flex flex-col">
-                         <div className="flex items-center gap-1 text-yellow-400 font-bold">
-                            <span>{design.rating}</span>
-                            <svg className="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+        <div 
+            tabIndex={0}
+            onClick={() => onInstallClick()}
+            onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    onInstallClick();
+                }
+            }}
+            className={`design-card group ${accentClass} flex flex-col justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 cursor-pointer select-none relative`}
+            role="article"
+            aria-label={`${displayName} showcase card. Press Enter or Space to view architecture specs.`}
+        >
+            {/* Top Hairline Restrained Brand Accent */}
+            <div 
+                className={`absolute top-0 inset-x-0 h-[2px] transition-opacity duration-300 ${
+                    isMenkR 
+                        ? 'bg-gradient-to-r from-transparent via-[#E7F45A]/50 to-transparent group-hover:via-[#E7F45A]' 
+                        : isWallet 
+                        ? 'bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent group-hover:via-emerald-400' 
+                        : 'bg-gradient-to-r from-transparent via-amber-500/50 to-transparent group-hover:via-amber-400'
+                }`}
+                aria-hidden="true"
+            />
+
+            {/* Header: (1) Icon, (2) Name, (3) Category, (5) Accent Indicator, (4) Description */}
+            <div className="p-4 sm:p-5 pb-3">
+                <div className="flex items-start justify-between gap-3">
+                    <div className="flex items-center gap-3 min-w-0">
+                        {/* 1. Authentic Application Icon */}
+                        {isMenkR ? (
+                            <div className="w-12 h-12 rounded-xl bg-[#1C1C1A] border border-[#E7F45A]/35 group-hover:border-[#E7F45A]/80 flex items-center justify-center p-1.5 flex-shrink-0 shadow-md transition-colors" aria-hidden="true">
+                                <svg viewBox="0 0 512 512" className="w-8 h-8" fill="none" aria-label="MenkiR CRM Logo">
+                                    <circle cx="256" cy="240" r="120" stroke="#E7F45A" strokeWidth="50" />
+                                    <path d="M 340 324 L 400 384" stroke="#E7F45A" strokeWidth="50" strokeLinecap="round" />
+                                    <circle cx="256" cy="240" r="40" fill="#E7F45A" />
+                                </svg>
+                            </div>
+                        ) : isWallet ? (
+                            <div className="w-12 h-12 rounded-xl bg-[#0F172A] border border-emerald-500/35 group-hover:border-emerald-400/80 p-1 flex items-center justify-center flex-shrink-0 shadow-md transition-colors overflow-hidden" aria-hidden="true">
+                                <img 
+                                    width="44" 
+                                    height="44" 
+                                    src="/images/wallet_icon.png" 
+                                    alt={`${displayName} application icon`} 
+                                    className="w-full h-full rounded-lg object-cover" 
+                                    loading="lazy" 
+                                    onError={(e) => {
+                                        (e.target as HTMLImageElement).src = '/images/crm_poster.webp';
+                                    }}
+                                />
+                            </div>
+                        ) : (
+                            <div className="w-12 h-12 rounded-xl bg-slate-950 border border-amber-500/35 group-hover:border-amber-400/80 p-1 flex items-center justify-center flex-shrink-0 shadow-md transition-colors overflow-hidden" aria-hidden="true">
+                                <img 
+                                    width="44" 
+                                    height="44" 
+                                    src="/images/formula_app_preview.webp" 
+                                    alt={`${displayName} application icon`} 
+                                    className="w-full h-full rounded-lg object-cover" 
+                                    loading="lazy" 
+                                    onError={(e) => {
+                                        (e.target as HTMLImageElement).src = '/images/crm_poster.webp';
+                                    }}
+                                />
+                            </div>
+                        )}
+
+                        <div className="min-w-0">
+                            {/* 2. Product Name */}
+                            <h3 className="font-bold text-white text-[15px] sm:text-base tracking-tight leading-snug truncate group-hover:text-white transition-colors">
+                                {displayName}
+                            </h3>
+                            {/* 3. Concise Product Category */}
+                            <p className="text-[11px] font-mono tracking-wider uppercase text-slate-400 font-medium mt-0.5 truncate">
+                                {categoryLabel}
+                            </p>
                         </div>
-                        <span className="text-xs text-slate-400">{design.reviews} reviews</span>
                     </div>
-                    <button 
-                        className="install-btn z-20 relative pointer-events-none" 
-                    >
-                        {buttonText}
-                    </button>
+
+                    {/* 5. Product-specific Accent Indicator */}
+                    <div className="flex-shrink-0">
+                        {accentIndicator}
+                    </div>
+                </div>
+
+                {/* 4. Short Factual Description */}
+                <p className="text-xs text-slate-300 leading-relaxed mt-3.5 line-clamp-2 min-h-[36px]">
+                    {design.description}
+                </p>
+            </div>
+
+            {/* Product Image Preview with restrained hover zoom */}
+            <div className="px-4 sm:px-5">
+                <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden bg-black/60 border border-white/10 group-hover:border-white/20 transition-colors">
+                    <img 
+                        width="340" 
+                        height="212" 
+                        src={design.poster} 
+                        alt={`${displayName} application preview`} 
+                        className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]" 
+                        loading="lazy" 
+                        onError={(e) => {
+                            (e.target as HTMLImageElement).src = '/images/crm_poster.webp';
+                        }}
+                    />
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-2.5 pt-5 pointer-events-none">
+                        <span className="text-[11px] text-slate-200 font-medium italic truncate block drop-shadow-sm">
+                            "{design.hover_quip}"
+                        </span>
+                    </div>
                 </div>
             </div>
-             <div className="install-progress-bar">
-                <div className="progress-fill"></div>
+
+            {/* Secondary Product Information (Features & Capabilities) */}
+            <div className="px-4 sm:px-5 py-3">
+                {secondaryFeatureInfo}
+            </div>
+
+            {/* 6. Rating & Metadata Area */}
+            <div className="px-4 sm:px-5 py-2.5 border-t border-white/5 flex items-center justify-between text-xs text-slate-400 font-sans">
+                <div className="flex items-center gap-1.5">
+                    <IconStar className="w-3.5 h-3.5 text-amber-400 fill-amber-400 flex-shrink-0" />
+                    <span className="font-bold text-slate-100 font-mono text-xs">{design.rating}</span>
+                    <span className="text-[11px] text-slate-400 font-mono">{design.reviews}</span>
+                </div>
+                <div className="flex items-center gap-1.5 text-[11px] font-mono text-slate-300">
+                    <span className="font-medium text-slate-200">{design.downloads || 'Verified App'}</span>
+                    <span className="text-white/20" aria-hidden="true">·</span>
+                    <span className="text-slate-400">{platformLabel}</span>
+                </div>
+            </div>
+
+            {/* 7 & 8. Dual Action Area: Primary Action & Secondary Details Action */}
+            <div className="p-4 sm:p-5 pt-3 bg-black/40 border-t border-white/10 rounded-b-2xl flex items-center gap-2.5">
+                {/* 7. Primary Action Button */}
+                {isMenkR && design.install_url ? (
+                    <a 
+                        href={design.install_url} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        onClick={(e) => e.stopPropagation()}
+                        className="h-11 flex-1 bg-[#E7F45A] hover:bg-[#d9e648] active:bg-[#c9d638] text-[#1C1C1A] text-xs font-bold px-3.5 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E7F45A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0D1017]"
+                        aria-label={`Launch ${displayName} live application`}
+                    >
+                        <span>Launch App</span>
+                        <IconExternalLink className="w-3.5 h-3.5 text-[#1C1C1A]" />
+                    </a>
+                ) : isWallet && (design.install_url || design.github_url) ? (
+                    <a 
+                        href={design.install_url || design.github_url} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        onClick={(e) => e.stopPropagation()}
+                        className="h-11 flex-1 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white text-xs font-bold px-3.5 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0D1017]"
+                        aria-label={`Launch ${displayName} live application`}
+                    >
+                        <span>Launch App</span>
+                        <IconExternalLink className="w-3.5 h-3.5 text-white" />
+                    </a>
+                ) : (
+                    <button 
+                        type="button"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            window.dispatchEvent(new CustomEvent('open-download-modal', { detail: { project: displayName } }));
+                        }}
+                        className="h-11 flex-1 bg-amber-500 hover:bg-amber-400 active:bg-amber-600 text-slate-950 text-xs font-bold px-3.5 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0D1017]"
+                        aria-label={`Request design spec for ${displayName}`}
+                    >
+                        <span>Request Spec</span>
+                        <IconExternalLink className="w-3.5 h-3.5 text-slate-950" />
+                    </button>
+                )}
+
+                {/* 8. Secondary Details Action Button */}
+                <button 
+                    type="button"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        onInstallClick();
+                    }}
+                    className="h-11 px-4 bg-white/[0.05] hover:bg-white/[0.1] active:bg-white/[0.14] text-slate-200 border border-white/10 hover:border-white/20 text-xs font-semibold rounded-xl transition-colors flex items-center justify-center gap-1.5 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0D1017]"
+                    aria-label={`View architecture and interactive specs for ${displayName}`}
+                >
+                    <IconInfoCircle className="w-3.5 h-3.5 text-slate-300" />
+                    <span>Specs</span>
+                </button>
             </div>
         </div>
     );
 };
 
 const ComingSoonModal: React.FC<{ onClose: () => void }> = ({ onClose }) => (
-    <div className="fixed inset-0 bg-black/80 z-[101] flex items-center justify-center p-4" onClick={onClose}>
+    <div className="fixed inset-0 bg-black/80 z-[101] flex items-center justify-center p-4" onClick={onClose} role="dialog" aria-modal="true" aria-label="Feature coming soon">
         <div 
             className="coming-soon-modal-content bg-slate-900 border border-slate-700 rounded-2xl p-8 text-center max-w-sm shadow-2xl shadow-red-500/20"
             onClick={e => e.stopPropagation()}
@@ -1008,7 +1340,7 @@ const ComingSoonModal: React.FC<{ onClose: () => void }> = ({ onClose }) => (
             <h2 className="text-3xl font-bold text-slate-100 netflix-sans tracking-wide">Coming Soon!</h2>
             <p className="text-slate-300 mt-2">This feature is currently under construction.</p>
             <p className="text-xs text-slate-500 mt-4">We're just polishing the pixels and training the AI to be extra persuasive. Check back soon!</p>
-            <button onClick={onClose} className="mt-6 bg-red-600 text-white font-bold py-2 px-8 rounded-full hover:bg-red-700 transition-colors">
+            <button onClick={onClose} className="mt-6 bg-red-600 text-white font-bold py-2 px-8 rounded-full hover:bg-red-700 transition-colors cursor-pointer">
                 I'll Be Back
             </button>
         </div>
@@ -1016,152 +1348,219 @@ const ComingSoonModal: React.FC<{ onClose: () => void }> = ({ onClose }) => (
 );
 
 const AppStoreModal: React.FC<{ design: Design; onClose: () => void }> = ({ design, onClose }) => {
+    const displayName = design.name || design.title || 'Digital Product';
+    const isMenkR = design.id === 'design4' || design.style.toLowerCase().includes('productivity') || displayName.toLowerCase().includes('menkir');
+    const isWallet = design.id === 'design1' || design.style.toLowerCase().includes('finance') || displayName.toLowerCase().includes('wallet');
+    const isFormula = design.id === 'design3' || design.style.toLowerCase().includes('engineering') || displayName.toLowerCase().includes('formula');
+
+    // Accessibility: Listen for Escape key to close
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') onClose();
+        };
+        document.addEventListener('keydown', handleKeyDown);
+        return () => document.removeEventListener('keydown', handleKeyDown);
+    }, [onClose]);
+
     return (
-        <div className="fixed inset-0 bg-black/50 z-[101] flex items-center justify-center sm:p-4 backdrop-blur-sm" onClick={onClose}>
+        <div 
+            className="fixed inset-0 bg-black/75 z-[101] flex items-center justify-center sm:p-4 backdrop-blur-md" 
+            onClick={onClose}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="app-store-modal-title"
+        >
             <div 
-                className="bg-[#202124] text-white sm:rounded-3xl w-full h-full sm:h-auto sm:max-h-[90vh] sm:max-w-2xl overflow-y-auto shadow-2xl animate-fade-in-up"
+                className="bg-[#12141a] text-white sm:rounded-3xl w-full h-full sm:h-auto sm:max-h-[90vh] sm:max-w-2xl overflow-y-auto shadow-2xl border border-white/10 animate-fade-in-up"
                 onClick={e => e.stopPropagation()}
             >
-                <div className="sticky top-0 bg-[#202124]/90 backdrop-blur z-20 flex justify-between items-center p-4">
-                    <button onClick={onClose} className="text-slate-200 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10">
+                {/* Header bar */}
+                <div className="sticky top-0 bg-[#12141a]/95 backdrop-blur z-20 flex justify-between items-center p-4 border-b border-white/5">
+                    <button 
+                        onClick={onClose} 
+                        className="text-slate-200 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 cursor-pointer"
+                        aria-label="Close dialog"
+                    >
                         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
                     </button>
-                    <button className="text-slate-200 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10">
-                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" /></svg>
+                    <span className="text-xs font-mono text-slate-400">PRODUCT ARCHITECTURE</span>
+                    <button 
+                        onClick={onClose} 
+                        className="text-slate-200 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 cursor-pointer"
+                        aria-label="Dismiss modal"
+                    >
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
                     </button>
                 </div>
 
-                <div className="px-6 relative">
-                    <div className="flex items-start gap-6">
-                        {design.id === 'design4' ? (
-                            <div className="w-24 h-24 md:w-28 md:h-28 rounded-3xl bg-[#121212] shadow-2xl flex-shrink-0 border border-slate-700 flex items-center justify-center relative overflow-hidden group">
-                                <div className="absolute inset-0 bg-gradient-to-br from-[#00FF00]/10 to-transparent"></div>
-                                <span className="text-[#00FF00] text-5xl font-black italic tracking-tighter drop-shadow-[0_0_10px_rgba(0,255,0,0.5)]">O</span>
-                                <div className="absolute top-2 right-2 w-2 h-2 rounded-full bg-[#00FF00] animate-pulse"></div>
-                            </div>
-                        ) : design.id === 'design1' ? (
-                            <div className="w-24 h-24 md:w-28 md:h-28 rounded-3xl bg-slate-800 shadow-2xl flex-shrink-0 border border-slate-700 flex items-center justify-center relative overflow-hidden group">
-                                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent"></div>
-                                <svg className="w-12 h-12 text-blue-400 drop-shadow-[0_0_10px_rgba(59,130,246,0.3)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                <div className="px-6 pt-5 relative">
+                    <div className="flex items-start gap-5">
+                        {/* Authentic Product Icon */}
+                        {isMenkR ? (
+                            <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-[#1C1C1A] shadow-2xl flex-shrink-0 border-2 border-[#E7F45A]/40 flex items-center justify-center p-3 relative overflow-hidden group">
+                                <svg viewBox="0 0 512 512" className="w-full h-full" fill="none" aria-label="MenkiR App Icon">
+                                    <circle cx="256" cy="240" r="120" stroke="#E7F45A" strokeWidth="50" />
+                                    <path d="M 340 324 L 400 384" stroke="#E7F45A" strokeWidth="50" strokeLinecap="round" />
+                                    <circle cx="256" cy="240" r="40" fill="#E7F45A" />
                                 </svg>
                             </div>
-                        ) : design.id === 'design2' ? (
-                            <div className="w-24 h-24 md:w-28 md:h-28 rounded-3xl bg-black shadow-[0_0_20px_rgba(220,38,38,0.3)] flex-shrink-0 border border-red-900/50 flex items-center justify-center relative overflow-hidden group">
-                                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-900/50 to-transparent opacity-50"></div>
-                                <svg className="w-12 h-12 text-red-600 drop-shadow-[0_0_15px_rgba(220,38,38,0.8)] relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 4v16m8-8H4" />
-                                    <circle cx="12" cy="12" r="3" />
-                                </svg>
+                        ) : isWallet ? (
+                            <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-[#0F172A] shadow-2xl flex-shrink-0 border-2 border-emerald-500/50 p-2 flex items-center justify-center relative overflow-hidden group">
+                                <img 
+                                    width="80" 
+                                    height="80" 
+                                    src="/images/wallet_icon.png" 
+                                    alt={`${displayName} application icon`} 
+                                    className="w-full h-full rounded-xl object-cover" 
+                                    onError={(e) => {
+                                        (e.target as HTMLImageElement).src = '/images/crm_poster.webp';
+                                    }}
+                                />
                             </div>
-                        ) : design.id === 'design3' ? (
-                            <div className="w-24 h-24 md:w-28 md:h-28 bg-[#1a0f08] flex-shrink-0 border-2 border-[#d4af37] flex items-center justify-center relative overflow-hidden group shadow-[0_4px_15px_rgba(0,0,0,0.8)]">
-                                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')] opacity-30"></div>
-                                <svg className="w-12 h-12 text-[#d4af37] relative z-10 drop-shadow-md" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
-                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                                </svg>
-                                <div className="absolute top-1 left-1 w-2 h-2 border-t border-l border-[#d4af37]"></div>
-                                <div className="absolute top-1 right-1 w-2 h-2 border-t border-r border-[#d4af37]"></div>
-                                <div className="absolute bottom-1 left-1 w-2 h-2 border-b border-l border-[#d4af37]"></div>
-                                <div className="absolute bottom-1 right-1 w-2 h-2 border-b border-r border-[#d4af37]"></div>
+                        ) : isFormula ? (
+                            <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-[#1a0f08] flex-shrink-0 border-2 border-amber-500/50 p-2 flex items-center justify-center relative overflow-hidden group shadow-xl">
+                                <img 
+                                    width="80" 
+                                    height="80" 
+                                    src="/images/formula_app_preview.webp" 
+                                    alt={`${displayName} application icon`} 
+                                    className="w-full h-full rounded-xl object-cover" 
+                                    onError={(e) => {
+                                        (e.target as HTMLImageElement).src = '/images/crm_poster.webp';
+                                    }}
+                                />
                             </div>
                         ) : (
-                            <img width="112" height="112" src={design.poster} alt={design.name} className="w-24 h-24 md:w-28 md:h-28 rounded-2xl object-cover shadow-lg flex-shrink-0 border border-slate-700/50" loading="lazy" />
+                            <img 
+                                width="96" 
+                                height="96" 
+                                src={design.poster} 
+                                alt={displayName} 
+                                className="w-20 h-20 md:w-24 md:h-24 rounded-2xl object-cover shadow-lg flex-shrink-0 border border-slate-700/50" 
+                                loading="lazy" 
+                                onError={(e) => {
+                                    (e.target as HTMLImageElement).src = '/images/crm_poster.webp';
+                                }}
+                            />
                         )}
-                        <div className="flex-1 pt-1">
-                            <h2 className="text-2xl font-bold tracking-tight leading-tight">{design.name}</h2>
-                            <p className="text-[#01875f] font-medium mt-1">{design.developer || 'Menkir Wolde'}</p>
-                            <p className="text-slate-400 text-xs mt-1">Contains ads • In-app purchases</p>
+
+                        <div className="flex-1 pt-0.5">
+                            <h2 id="app-store-modal-title" className="text-xl md:text-2xl font-bold tracking-tight leading-tight text-white">{displayName}</h2>
+                            <p className="text-sm font-semibold mt-1 flex items-center gap-1.5" style={{ color: isMenkR ? '#E7F45A' : isWallet ? '#10B981' : '#F59E0B' }}>
+                                <span>{design.developer || 'Menkir Wolde'}</span>
+                                <span className="text-white/40">•</span>
+                                <span className="text-xs text-white/60 font-normal">{design.style}</span>
+                            </p>
+                            <p className="text-slate-400 text-xs mt-1.5 font-mono">Verified Production Codebase • Open Architecture</p>
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-8 mt-6 text-sm overflow-x-auto pb-2 scrollbar-hide">
+                    {/* Metadata chips */}
+                    <div className="flex items-center gap-6 mt-6 text-sm overflow-x-auto pb-2 scrollbar-hide border-y border-white/5 py-3">
                         <div className="flex flex-col items-center flex-shrink-0">
-                            <div className="flex items-center gap-1 font-bold text-base">
+                            <div className="flex items-center gap-1 font-bold text-base text-white">
                                 <span>{design.rating}</span>
-                                <svg className="w-3.5 h-3.5 text-slate-300 mb-[1px]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                                <IconStar className="w-3.5 h-3.5 text-amber-400" />
                             </div>
                             <span className="text-slate-400 text-xs">{design.reviews} reviews</span>
                         </div>
-                        <div className="w-px h-8 bg-slate-700 flex-shrink-0"></div>
+                        <div className="w-px h-8 bg-white/10 flex-shrink-0"></div>
                         <div className="flex flex-col items-center justify-center flex-shrink-0">
-                            <div className="font-bold text-base">{design.downloads || '500K+'}</div>
-                            <span className="text-slate-400 text-xs font-normal">Downloads</span>
+                            <div className="font-bold text-base text-white">{design.downloads || '100K+'}</div>
+                            <span className="text-slate-400 text-xs font-normal">Active Reach</span>
                         </div>
-                        <div className="w-px h-8 bg-slate-700 flex-shrink-0"></div>
-                        {design.contentRating === 'Top Grossing Finance' ? (
-                            <div className="flex flex-col items-center justify-center flex-shrink-0">
-                                <div className="font-bold text-xs bg-emerald-500/20 text-emerald-400 rounded px-1.5 mt-0.5 mb-[3px] leading-tight border border-emerald-500/30">#1</div>
-                                <span className="text-slate-400 text-xs font-normal">Top Grossing</span>
-                            </div>
-                        ) : (
-                            <div className="flex flex-col items-center justify-center flex-shrink-0">
-                                <div className="font-bold border border-slate-500 rounded text-[10px] px-1 mt-0.5 mb-[3px] leading-tight">{design.contentRating || 'E'}</div>
-                                <span className="text-slate-400 text-xs font-normal">Everyone</span>
-                            </div>
-                        )}
+                        <div className="w-px h-8 bg-white/10 flex-shrink-0"></div>
+                        <div className="flex flex-col items-center justify-center flex-shrink-0">
+                            <div className="font-bold text-xs bg-emerald-500/20 text-emerald-300 rounded px-2 py-0.5 border border-emerald-500/30 font-mono">100% Free</div>
+                            <span className="text-slate-400 text-xs font-normal mt-0.5">Open Source</span>
+                        </div>
                         {design.editorChoice && (
                             <>
-                                <div className="w-px h-8 bg-slate-700 flex-shrink-0"></div>
+                                <div className="w-px h-8 bg-white/10 flex-shrink-0"></div>
                                 <div className="flex flex-col items-center justify-center flex-shrink-0 px-2">
                                     <div className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full mb-1 flex items-center gap-1 shadow-lg">
-                                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                                        <IconStar className="w-3 h-3 text-white" />
                                         Editor's Choice
                                     </div>
-                                    <span className="text-slate-400 text-xs font-normal">Award</span>
+                                    <span className="text-slate-400 text-xs font-normal">Verified Build</span>
                                 </div>
                             </>
                         )}
                     </div>
 
-                    <div className="mt-6 flex flex-col gap-3">
-                        {design.install_url && design.install_url !== '#' ? (
+                    {/* Action buttons */}
+                    <div className="mt-5 flex flex-col sm:flex-row gap-3">
+                        {isMenkR && design.install_url ? (
                             <a 
                                 href={design.install_url} 
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={`w-full font-bold py-3.5 rounded-full flex justify-center items-center transition-all ${design.id === 'design4' ? 'bg-[#00FF00] hover:bg-[#00cc00] text-black shadow-[0_0_15px_rgba(0,255,0,0.3)]' : design.id === 'design1' ? 'bg-blue-600 hover:bg-blue-500 text-white shadow-[0_0_15px_rgba(37,99,235,0.3)]' : design.id === 'design2' ? 'bg-red-700 hover:bg-red-600 text-white shadow-[0_0_20px_rgba(220,38,38,0.4)]' : design.id === 'design3' ? 'bg-gradient-to-b from-[#d4af37] to-[#8a6825] hover:from-[#e2cda4] hover:to-[#b89552] text-[#1a0f08] border border-[#ffeba1] shadow-[0_4px_10px_rgba(0,0,0,0.8)]' : 'bg-[#01875F] hover:bg-[#00a876] text-white'}`}
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="flex-1 font-bold py-3 px-4 rounded-xl flex justify-center items-center gap-2 transition-all bg-[#E7F45A] hover:bg-[#d6e34c] text-[#1C1C1A] shadow-md cursor-pointer"
                             >
-                                {design.primaryButtonLabel || 'Install APK'}
+                                <span>Launch Live Application</span>
+                                <IconExternalLink className="w-4 h-4" />
+                            </a>
+                        ) : isWallet && (design.install_url || design.github_url) ? (
+                            <a 
+                                href={design.install_url || design.github_url} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="flex-1 font-bold py-3 px-4 rounded-xl flex justify-center items-center gap-2 transition-all bg-emerald-600 hover:bg-emerald-500 text-white shadow-md cursor-pointer"
+                            >
+                                <span>Launch Live Application</span>
+                                <IconExternalLink className="w-4 h-4" />
                             </a>
                         ) : (
                             <button
                                 type="button"
-                                onClick={() => window.dispatchEvent(new CustomEvent('open-download-modal', { detail: { project: design.title } }))}
-                                className={`w-full font-bold py-3.5 rounded-full flex justify-center items-center transition-all cursor-pointer ${design.id === 'design3' ? 'bg-gradient-to-b from-[#d4af37] to-[#8a6825] hover:from-[#e2cda4] hover:to-[#b89552] text-[#1a0f08] border border-[#ffeba1] shadow-[0_4px_10px_rgba(0,0,0,0.8)]' : 'bg-[#01875F] hover:bg-[#00a876] text-white'}`}
+                                onClick={() => window.dispatchEvent(new CustomEvent('open-download-modal', { detail: { project: displayName } }))}
+                                className="flex-1 font-bold py-3 px-4 rounded-xl flex justify-center items-center gap-2 transition-all cursor-pointer bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 shadow-md"
                             >
-                                Request Design Spec &amp; Prototype
+                                <span>Request Design Spec &amp; Prototype</span>
+                                <IconExternalLink className="w-4 h-4" />
                             </button>
                         )}
-                        <a href="https://t.me/frontenddesigns" target="_blank" rel="noopener noreferrer" className={`w-full font-semibold py-3.5 rounded-full flex justify-center items-center gap-2 transition-colors border ${design.id === 'design4' ? 'bg-transparent border-[#00FF00] text-[#00FF00] hover:bg-[#00FF00]/10' : design.id === 'design1' ? 'bg-slate-800 hover:bg-slate-700 border-slate-700 text-blue-400' : design.id === 'design2' ? 'bg-black border-red-900/50 text-red-500 hover:bg-red-900/20' : design.id === 'design3' ? 'bg-[#1a0f08] border-[#a08447] text-[#d4af37] hover:bg-[#2a170f]' : 'bg-slate-800 hover:bg-slate-700 text-[#27A7E7] border-slate-700'}`}>
-                            <TelegramIcon className="w-5 h-5 fill-current" />
-                            {design.secondaryButtonLabel || 'Mirror via Telegram'}
+
+                        {design.github_url && (
+                            <a 
+                                href={design.github_url} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="flex-1 font-semibold py-3 px-4 rounded-xl flex justify-center items-center gap-2 transition-colors border border-white/20 bg-white/5 hover:bg-white/10 text-white cursor-pointer"
+                            >
+                                <IconGitHub className="w-4 h-4" />
+                                <span>GitHub Repository</span>
+                            </a>
+                        )}
+
+                        <a 
+                            href="https://t.me/frontenddesigns" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="font-semibold py-3 px-4 rounded-xl flex justify-center items-center gap-2 transition-colors border border-white/10 bg-white/[0.03] hover:bg-white/10 text-slate-300 cursor-pointer"
+                        >
+                            <TelegramIcon className="w-4 h-4 fill-current" />
+                            <span>Telegram Channel</span>
                         </a>
                     </div>
                 </div>
 
+                {/* Authentic Screenshots Carousel in PhoneFrame */}
                 <div className="mt-8 px-6 overflow-x-auto scrollbar-hide py-2">
                     <div className="flex items-center gap-4 w-max pb-4">
-                        {design.id === 'design4' ? (
+                        {isMenkR ? (
                             <>
-                                <PhoneFrame><OptaScreen1 /></PhoneFrame>
-                                <PhoneFrame><OptaScreen2 /></PhoneFrame>
-                                <PhoneFrame><OptaScreen3 /></PhoneFrame>
+                                <PhoneFrame><MenkRScreen1 /></PhoneFrame>
+                                <PhoneFrame><MenkRScreen2 /></PhoneFrame>
+                                <PhoneFrame><MenkRScreen3 /></PhoneFrame>
                             </>
-                        ) : design.id === 'design1' ? (
+                        ) : isWallet ? (
                             <>
                                 <PhoneFrame><WalletScreen1 /></PhoneFrame>
                                 <PhoneFrame><WalletScreen2 /></PhoneFrame>
                                 <PhoneFrame><WalletScreen3 /></PhoneFrame>
                             </>
-                        ) : design.id === 'design2' ? (
-                            <>
-                                <PhoneFrame><LifeScreen1 /></PhoneFrame>
-                                <PhoneFrame><LifeScreen2 /></PhoneFrame>
-                                <PhoneFrame><LifeScreen3 /></PhoneFrame>
-                            </>
-                        ) : design.id === 'design3' ? (
+                        ) : isFormula ? (
                             <>
                                 <PhoneFrame><GildedScreen1 /></PhoneFrame>
                                 <PhoneFrame><GildedScreen2 /></PhoneFrame>
@@ -1169,54 +1568,40 @@ const AppStoreModal: React.FC<{ design: Design; onClose: () => void }> = ({ desi
                             </>
                         ) : (
                             <>
-                                <img width="400" height="711" src={`https://picsum.photos/seed/${design.id}-1/400/711`} alt="Screenshot 1" className="w-[140px] md:w-[180px] aspect-[9/16] object-cover rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] border border-slate-800/50" loading="lazy" />
-                                <img width="400" height="711" src={`https://picsum.photos/seed/${design.id}-2/400/711`} alt="Screenshot 2" className="w-[140px] md:w-[180px] aspect-[9/16] object-cover rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] border border-slate-800/50" loading="lazy" />
-                                <img width="400" height="711" src={`https://picsum.photos/seed/${design.id}-3/400/711`} alt="Screenshot 3" className="w-[140px] md:w-[180px] aspect-[9/16] object-cover rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] border border-slate-800/50" loading="lazy" />
-                                <img width="400" height="711" src={`https://picsum.photos/seed/${design.id}-4/400/711`} alt="Screenshot 4" className="w-[140px] md:w-[180px] aspect-[9/16] object-cover rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] border border-slate-800/50" loading="lazy" />
+                                <img width="400" height="711" src={`/images/crm_screenshot_1-1.webp`} alt={`${displayName} screenshot 1`} className="w-[140px] md:w-[180px] aspect-[9/16] object-cover rounded-xl shadow-lg border border-white/10" loading="lazy" />
+                                <img width="400" height="711" src={`/images/crm_screenshot_2.webp`} alt={`${displayName} screenshot 2`} className="w-[140px] md:w-[180px] aspect-[9/16] object-cover rounded-xl shadow-lg border border-white/10" loading="lazy" />
                             </>
                         )}
                     </div>
                 </div>
 
-                <div className="px-6 py-4 mt-2">
-                    <div className="flex justify-between items-center mb-4 cursor-pointer group">
-                        <h3 className="text-lg font-medium">About this app</h3>
-                        <svg className="w-6 h-6 text-slate-400 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                    </div>
+                {/* About & Technical Specifications */}
+                <div className="px-6 py-4 mt-2 border-t border-white/5">
+                    <h3 className="text-lg font-bold text-white mb-2">About this application</h3>
                     <p className="text-slate-300 text-sm leading-relaxed">{design.description}</p>
                     <div className="mt-4 flex flex-wrap gap-2">
-                        <span className="px-3 py-1 rounded-full border border-slate-700 text-xs text-slate-300">{design.style}</span>
-                        <span className="px-3 py-1 rounded-full border border-slate-700 text-xs text-slate-300">Design</span>
-                        <span className="px-3 py-1 rounded-full border border-slate-700 text-xs text-slate-300">Productivity</span>
+                        <span className="px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-slate-300 font-mono">{design.style}</span>
+                        <span className="px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-slate-300 font-mono">{design.tech_stack}</span>
+                        <span className="px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs text-emerald-400 font-mono">Client-Side Secure</span>
                     </div>
                 </div>
 
-                <div className="px-6 py-4 border-t border-slate-800">
-                    <div className="flex justify-between items-center mb-4 cursor-pointer group">
-                        <h3 className="text-lg font-medium">Data safety</h3>
-                        <svg className="w-6 h-6 text-slate-400 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                    </div>
-                    <p className="text-slate-400 text-sm leading-relaxed">
-                        Safety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.
+                {/* Data Safety & Architecture */}
+                <div className="px-6 py-4 border-t border-white/5 bg-black/20">
+                    <h3 className="text-base font-bold text-white mb-2">Architecture &amp; Data Safety</h3>
+                    <p className="text-slate-400 text-xs leading-relaxed">
+                        Engineered with strict zero-telemetry and client-first principles. All private records, client data, and budgets reside exclusively on the user's device storage.
                     </p>
-                    <div className="mt-4 bg-[#2D2E30] rounded-xl p-4">
-                        <div className="flex items-start gap-4 mb-4">
-                            <svg className="w-6 h-6 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" /></svg>
-                            <div className="text-sm">
-                                <p className="text-slate-200">No data shared with third parties</p>
-                                <span className="text-slate-400 text-xs">All application telemetry is disabled by default; user preferences reside strictly in local client storage.</span>
-                            </div>
-                        </div>
-                        <div className="flex items-start gap-4">
-                            <svg className="w-6 h-6 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
-                            <div className="text-sm">
-                                <p className="text-slate-200">This app may collect these data types</p>
-                                <p className="text-slate-400">Location, Personal info and 2 others</p>
-                            </div>
+                    <div className="mt-3 bg-white/[0.04] rounded-xl p-3.5 border border-white/10 flex items-start gap-3">
+                        <svg className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        <div className="text-xs">
+                            <p className="text-slate-200 font-semibold">Zero third-party data tracking</p>
+                            <span className="text-slate-400">Application state is isolated in client memory and IndexedDB. No external trackers or analytics scripts are embedded.</span>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     );
