@@ -1532,16 +1532,6 @@ const AppStoreModal: React.FC<{ design: Design; onClose: () => void }> = ({ desi
                                 <span>GitHub Repository</span>
                             </a>
                         )}
-
-                        <a 
-                            href="https://t.me/frontenddesigns" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="font-semibold py-3 px-4 rounded-xl flex justify-center items-center gap-2 transition-colors border border-white/10 bg-white/[0.03] hover:bg-white/10 text-slate-300 cursor-pointer"
-                        >
-                            <TelegramIcon className="w-4 h-4 fill-current" />
-                            <span>Telegram Channel</span>
-                        </a>
                     </div>
                 </div>
 
@@ -2168,26 +2158,12 @@ export const Portfolio: React.FC<{
                             Contact Me
                         </a>
                         <button 
-                            onClick={() => setView('resume')} 
-                            className="bg-slate-900 border border-slate-700 hover:border-slate-500 hover:bg-slate-800 active:scale-95 text-white font-bold py-2.5 sm:py-3 px-5 sm:px-7 rounded-lg shadow-lg transition-all text-xs sm:text-sm tracking-wider uppercase flex items-center justify-center cursor-pointer min-h-[44px] focus-visible:ring-2 focus-visible:ring-red-500"
-                        >
-                            Resume / CV
-                        </button>
-                        <button 
                             onClick={() => window.dispatchEvent(new CustomEvent('open-download-modal', { detail: { project: 'Engineering Architecture Portfolio' } }))}
                             className="bg-slate-900 border border-red-500/50 hover:bg-red-600/20 active:scale-95 text-white font-bold py-2.5 sm:py-3 px-5 sm:px-7 rounded-lg shadow-lg transition-all text-xs sm:text-sm tracking-wider uppercase flex items-center justify-center gap-2 cursor-pointer min-h-[44px] focus-visible:ring-2 focus-visible:ring-red-500"
                         >
                             <svg className="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
                             <span>Request Design Spec</span>
                         </button>
-                        <a 
-                            href="https://t.me/frontenddesigns" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="bg-slate-900 border border-slate-700 hover:border-slate-500 hover:bg-slate-800 active:scale-95 text-white font-bold py-2.5 sm:py-3 px-5 sm:px-7 rounded-lg shadow-lg transition-all text-xs sm:text-sm tracking-wider uppercase flex items-center justify-center cursor-pointer min-h-[44px] focus-visible:ring-2 focus-visible:ring-red-500"
-                        >
-                            Telegram Channel
-                        </a>
                     </div>
                 </div>
 
